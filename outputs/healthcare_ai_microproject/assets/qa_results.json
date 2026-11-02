@@ -1,0 +1,501 @@
+{
+ "passed": 99,
+ "total": 99,
+ "checks": [
+  {
+   "check": "DOCX opens; 15 figures + logo; tables = 19 captioned + 3 note boxes + TOC + evaluation form",
+   "pass": true,
+   "detail": "16 images, 24 tables, 3 note boxes"
+  },
+  {
+   "check": "DOCX contains 'Ajai Kumar N (URK23CS5064)'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '25AI2004'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'Ms. Gethsia P'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'October 2026'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'scheduled on'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'NeuroVision AI'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '154.7'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '177.8'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '182.1'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '129.4'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '157.6'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '163.5'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.817'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.839'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.869'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.786'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.821'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.853'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '3,295'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '2,311'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '1,076 of 1,600'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '207'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '46 no-tumour'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'unverified'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'CC BY 4.0'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'not proven'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'unconfirmed'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'third-party'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'did not save model checkpoints'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'no out-of-distribution'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '16 passed'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '6/6'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'no automated browser-level'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'TITLE OF MICRO PROJECT'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'Name (Reg No)'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'NAMES OF THE STUDENTS'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'TITLE OF THE PROJECT'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover '[to be filled'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'AIML/AI'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'presentation held on'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX claims no clinical validity or superiority",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Evaluation table kept with blank marks",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX: every decimal matches a saved/derived value",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "all 15 references are cited in the text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "references are numbered in order of first citation",
+   "pass": true,
+   "detail": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]"
+  },
+  {
+   "check": "reference list has 15 entries",
+   "pass": true,
+   "detail": "15"
+  },
+  {
+   "check": "every image has a caption (Figure captions == images)",
+   "pass": true,
+   "detail": "15 figure captions, 16 inline images (1 is the logo)"
+  },
+  {
+   "check": "every data table has a caption",
+   "pass": true,
+   "detail": "19 captions for 19 data tables"
+  },
+  {
+   "check": "Figure numbering is consecutive within chapters",
+   "pass": true,
+   "detail": "{3: [1, 2, 3, 4], 4: [1, 2, 3, 4, 5], 5: [1, 2, 3, 4, 5, 6]}"
+  },
+  {
+   "check": "Table numbering is consecutive within chapters",
+   "pass": true,
+   "detail": "{2: [1], 3: [1, 2, 3, 4, 5], 4: [1, 2, 3, 4, 5], 5: [1, 2, 3, 4, 5, 6, 7, 8]}"
+  },
+  {
+   "check": "PDF opens and has 36 pages",
+   "pass": true,
+   "detail": "36"
+  },
+  {
+   "check": "PDF contains 'Ajai Kumar N (URK23CS5064)'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDF contains '154.7'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDF contains '0.869'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDF contains 'BONAFIDE CERTIFICATE'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDF contains 'EVALUATION REPORT'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDF contains 'REFERENCES'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDF contains 'Signature of Faculty In-charge'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "TOC page numbers agree with the PDF",
+   "pass": true,
+   "detail": "{'INTRODUCTION': 1, 'LITERATURE REVIEW': 4, 'METHODOLOGY': 7, 'FABRICATION/SIMULATION/PROGRAM OR CODE/DESIGN': 14, 'RESULTS AND INTERPRETATION': 22, 'CONCLUSION AND FUTURE SCOPE': 29, 'REFERENCES': 31, '1.1': 1, '1.2': 1, '1.3': 2, '1.4': 3}"
+  },
+  {
+   "check": "PDF page footers: roman for the front matter, arabic from Chapter 1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PDF: all 16 images embedded",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX has 14 slides, 16:9",
+   "pass": true,
+   "detail": "14 slides 13.33x7.50 in"
+  },
+  {
+   "check": "PPTX: every shape inside the slide",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "PPTX: pictures decode",
+   "pass": true,
+   "detail": "10"
+  },
+  {
+   "check": "PPTX: no text smaller than 10 pt",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "PPTX contains 'DCGAN gave the best generation metrics'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '154.7'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '129.4'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '177.8'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '157.6'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '182.1'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '163.5'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '0.817'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '0.839'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '0.869'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '492'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '46'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'UNVERIFIED'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'NOT proven'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'unconfirmed'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'third-party'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'Ajai Kumar N'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'URK23CS5064'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'Gethsia'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '29/10/26'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'not a medical device'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'CC BY 4.0'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'Questions?'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX does not claim 'superior'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX does not claim 'outperforms'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX does not claim 'clinically validated diagnostic'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX does not claim 'proves'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX does not claim '[to be filled'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX: every decimal matches a saved/derived value",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "PPTX: speaker notes on every slide",
+   "pass": true,
+   "detail": "14"
+  },
+  {
+   "check": "key metrics appear in DOCX, PDF and PPTX alike",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "old submission deliverables match their manifest hashes",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "no research output, submission file, checkpoint, source or dataset file modified during this task",
+   "pass": true,
+   "detail": "[]"
+  }
+ ]
+}

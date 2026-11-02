@@ -1,0 +1,128 @@
+{
+  "method": "32x32 mean-removed cosine, 8 orientations, edge if sim>=threshold or byte-identical; connected components",
+  "threshold": 0.99,
+  "pool_images": 7200,
+  "exact_hash_duplicate_groups": 153,
+  "n_clusters": 3782,
+  "cluster_size_histogram": {
+    "1": 1711,
+    "2": 1890,
+    "3": 52,
+    "4": 33,
+    "5": 18,
+    "6": 7,
+    "7": 4,
+    "8": 6,
+    "9": 4,
+    "10": 1,
+    "11": 3,
+    "12": 6,
+    "13": 1,
+    "14": 2,
+    "15": 3,
+    "16": 5,
+    "17": 3,
+    "18": 3,
+    "19": 4,
+    "20": 4,
+    "21": 3,
+    "22": 1,
+    "23": 4,
+    "24": 2,
+    "25": 1,
+    "27": 5,
+    "28": 1,
+    "32": 1,
+    "36": 1,
+    "41": 1,
+    "50": 1,
+    "63": 1
+  },
+  "max_cluster_size": 1890,
+  "clusters_spanning_original_train_and_test": 759,
+  "quarantined_clusters": {
+    "conflicting_labels": 8,
+    "all_augmented_filenames": 185
+  },
+  "quarantined_images": 214,
+  "augmented_filename_images": 203,
+  "threshold_sensitivity": {
+    "0.999": {
+      "n_clusters": 3927,
+      "max_cluster_size": 43,
+      "n_images_in_multi_clusters": 5394
+    },
+    "0.995": {
+      "n_clusters": 3857,
+      "max_cluster_size": 58,
+      "n_images_in_multi_clusters": 5438
+    },
+    "0.99": {
+      "n_clusters": 3782,
+      "max_cluster_size": 63,
+      "n_images_in_multi_clusters": 5489
+    },
+    "0.98": {
+      "n_clusters": 3479,
+      "max_cluster_size": 83,
+      "n_images_in_multi_clusters": 5657
+    }
+  },
+  "representatives": 3589,
+  "partition_class_counts_representatives": {
+    "train": {
+      "glioma": 1005,
+      "meningioma": 580,
+      "notumor": 258,
+      "pituitary": 668
+    },
+    "val": {
+      "glioma": 216,
+      "meningioma": 124,
+      "notumor": 56,
+      "pituitary": 143
+    },
+    "test": {
+      "glioma": 216,
+      "meningioma": 124,
+      "notumor": 56,
+      "pituitary": 143
+    }
+  },
+  "partition_totals": {
+    "train": 2511,
+    "val": 539,
+    "test": 539
+  },
+  "clusters_in_more_than_one_partition": 0,
+  "cross_partition_representative_similarity": {
+    "train_vs_val": {
+      "n_query": 539,
+      "max_similarity": 0.9896368384361267,
+      "n_ge_0.98": 55,
+      "n_ge_0.95": 244,
+      "n_ge_0.90": 406,
+      "median": 0.9462623596191406
+    },
+    "train_vs_test": {
+      "n_query": 539,
+      "max_similarity": 0.9896324872970581,
+      "n_ge_0.98": 46,
+      "n_ge_0.95": 247,
+      "n_ge_0.90": 423,
+      "median": 0.9463756680488586
+    },
+    "val_vs_test": {
+      "n_query": 539,
+      "max_similarity": 0.9859573841094971,
+      "n_ge_0.98": 10,
+      "n_ge_0.95": 82,
+      "n_ge_0.90": 226,
+      "median": 0.8864004015922546
+    }
+  },
+  "caveats": [
+    "heuristic similarity, not ground truth; no patient ids so same-patient neighbouring slices are not detected",
+    "augmented-looking files are quarantined by filename only; augmented files with unmarked names would not be recognised"
+  ]
+}

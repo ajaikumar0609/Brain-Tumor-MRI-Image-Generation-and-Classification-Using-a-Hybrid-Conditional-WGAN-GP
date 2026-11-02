@@ -1,0 +1,51 @@
+{
+  "manifest": "/Users/ajaikumarn/Desktop/brain/outputs/deduplicated_experiment/split_manifest.csv",
+  "manifest_sha256": "6bc6835cd1fbef966cfd8c3e5188e9a651dec1925c439d386e6d85a1aa3696d3",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 15,
+  "n_train": 2311,
+  "n_val": 492,
+  "synthetic_per_class": 722,
+  "synthetic_seed": 3001,
+  "synthetic_labels": "requested conditioning labels; correctness unverified",
+  "composition": {
+    "A_real_only": [
+      918,
+      566,
+      227,
+      600
+    ],
+    "B_real_plus_cwgangp_synthetic": [
+      1640,
+      1288,
+      949,
+      1322
+    ],
+    "C_real_only_matched_composition": [
+      1640,
+      1288,
+      949,
+      1322
+    ]
+  },
+  "resample_seed": 5001,
+  "leakage_audit": {
+    "gan_checkpoint": "/Users/ajaikumarn/Desktop/brain/outputs/deduplicated_experiment/gan/cwgangp/checkpoint_step_3000.pth",
+    "gan_gen_updates": 3000,
+    "gan_critic_updates": 15000,
+    "gan_manifest_arg": "/Users/ajaikumarn/Desktop/brain/outputs/deduplicated_experiment/split_manifest.csv",
+    "gan_recorded_train_hash": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+    "manifest_train_hash": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+    "gan_trained_on_exactly_the_train_partition": true,
+    "gan_images_used": 2311
+  },
+  "model": "SmallCNN (4 conv blocks 32-64-128-256, GAP, dropout 0.3), Adam 1e-3, batch 64, no augmentation",
+  "device": "mps",
+  "smoke": false,
+  "test_use": "read only after training, for final evaluation of validation-selected weights",
+  "torch_version": "2.14.0"
+}

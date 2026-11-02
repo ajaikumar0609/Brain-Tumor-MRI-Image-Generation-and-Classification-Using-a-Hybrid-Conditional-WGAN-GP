@@ -1,0 +1,170 @@
+[
+ {
+  "sim": 0.9896368384361267,
+  "query": "Training/glioma/Tr-gl_553.jpg",
+  "match": "Training/glioma/Tr-gl_628.jpg",
+  "orientation": 1,
+  "partitions": "train-val"
+ },
+ {
+  "sim": 0.9896324872970581,
+  "query": "Training/glioma/Tr-gl_566.jpg",
+  "match": "Training/glioma/Tr-gl_1350.jpg",
+  "orientation": 1,
+  "partitions": "train-test"
+ },
+ {
+  "sim": 0.9889562129974365,
+  "query": "Testing/meningioma/Te-me_210.jpg",
+  "match": "Training/meningioma/Tr-me_167.jpg",
+  "orientation": 0,
+  "partitions": "train-test"
+ },
+ {
+  "sim": 0.9889473915100098,
+  "query": "Training/pituitary/Tr-pi_112.jpg",
+  "match": "Training/pituitary/Tr-pi_1314.jpg",
+  "orientation": 0,
+  "partitions": "train-val"
+ },
+ {
+  "sim": 0.9887485504150391,
+  "query": "Training/glioma/Tr-gl_1325.jpg",
+  "match": "Training/glioma/Tr-gl_993.jpg",
+  "orientation": 0,
+  "partitions": "train-test"
+ },
+ {
+  "sim": 0.9887446165084839,
+  "query": "Training/glioma/Tr-gl_609.jpg",
+  "match": "Training/glioma/Tr-gl_465.jpg",
+  "orientation": 0,
+  "partitions": "train-test"
+ },
+ {
+  "sim": 0.988656222820282,
+  "query": "Training/notumor/Tr-no_1045.jpg",
+  "match": "Training/notumor/Tr-no_1027.jpg",
+  "orientation": 4,
+  "partitions": "train-test"
+ },
+ {
+  "sim": 0.9886537790298462,
+  "query": "Training/glioma/Tr-gl_700.jpg",
+  "match": "Training/glioma/Tr-gl_377.jpg",
+  "orientation": 1,
+  "partitions": "train-test"
+ },
+ {
+  "sim": 0.988649845123291,
+  "query": "Training/glioma/Tr-gl_153.jpg",
+  "match": "Training/glioma/Tr-gl_1350.jpg",
+  "orientation": 0,
+  "partitions": "train-test"
+ },
+ {
+  "sim": 0.9885619878768921,
+  "query": "Training/glioma/Tr-gl_597.jpg",
+  "match": "Training/glioma/Tr-gl_628.jpg",
+  "orientation": 0,
+  "partitions": "train-val"
+ },
+ {
+  "sim": 0.9882862567901611,
+  "query": "Training/glioma/Tr-gl_1154.jpg",
+  "match": "Training/glioma/Tr-gl_1138.jpg",
+  "orientation": 1,
+  "partitions": "train-test"
+ },
+ {
+  "sim": 0.9878430366516113,
+  "query": "Training/glioma/Tr-gl_704.jpg",
+  "match": "Training/glioma/Tr-gl_1146.jpg",
+  "orientation": 0,
+  "partitions": "train-val"
+ },
+ {
+  "sim": 0.9877336025238037,
+  "query": "Training/glioma/Tr-gl_345.jpg",
+  "match": "Training/glioma/Tr-gl_137.jpg",
+  "orientation": 1,
+  "partitions": "train-val"
+ },
+ {
+  "sim": 0.9875180721282959,
+  "query": "Training/glioma/Tr-gl_707.jpg",
+  "match": "Training/glioma/Tr-gl_1098.jpg",
+  "orientation": 0,
+  "partitions": "train-val"
+ },
+ {
+  "sim": 0.9873623847961426,
+  "query": "Training/glioma/Tr-gl_398.jpg",
+  "match": "Training/glioma/Tr-gl_901.jpg",
+  "orientation": 0,
+  "partitions": "train-val"
+ },
+ {
+  "sim": 0.9873619675636292,
+  "query": "Training/glioma/Tr-gl_815.jpg",
+  "match": "Training/glioma/Tr-gl_602.jpg",
+  "orientation": 0,
+  "partitions": "train-val"
+ },
+ {
+  "sim": 0.9859573841094971,
+  "query": "Training/glioma/Tr-gl_84.jpg",
+  "match": "Training/glioma/Tr-gl_1228.jpg",
+  "orientation": 0,
+  "partitions": "val-test"
+ },
+ {
+  "sim": 0.9856101274490356,
+  "query": "Training/glioma/Tr-gl_609.jpg",
+  "match": "Training/glioma/Tr-gl_1334.jpg",
+  "orientation": 0,
+  "partitions": "val-test"
+ },
+ {
+  "sim": 0.9850509762763977,
+  "query": "Training/glioma/Tr-gl_1162.jpg",
+  "match": "Training/glioma/Tr-gl_1328.jpg",
+  "orientation": 0,
+  "partitions": "val-test"
+ },
+ {
+  "sim": 0.9838505983352661,
+  "query": "Testing/glioma/Te-gl_348.jpg",
+  "match": "Training/glioma/Tr-gl_707.jpg",
+  "orientation": 0,
+  "partitions": "val-test"
+ },
+ {
+  "sim": 0.9832351207733154,
+  "query": "Testing/pituitary/Te-pi_396.jpg",
+  "match": "Training/pituitary/Tr-pi_112.jpg",
+  "orientation": 0,
+  "partitions": "val-test"
+ },
+ {
+  "sim": 0.9828554391860962,
+  "query": "Training/pituitary/Tr-pi_1333.jpg",
+  "match": "Training/pituitary/Tr-pi_608.jpg",
+  "orientation": 1,
+  "partitions": "val-test"
+ },
+ {
+  "sim": 0.9822536706924438,
+  "query": "Testing/glioma/Te-gl_132.jpg",
+  "match": "Testing/glioma/Te-gl_164.jpg",
+  "orientation": 1,
+  "partitions": "val-test"
+ },
+ {
+  "sim": 0.9819096922874451,
+  "query": "Training/pituitary/Tr-pi_164.jpg",
+  "match": "Training/pituitary/Tr-pi_101.jpg",
+  "orientation": 1,
+  "partitions": "val-test"
+ }
+]

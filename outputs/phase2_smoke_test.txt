@@ -1,0 +1,28 @@
+# Phase 2 output, 2026-10-11 23:33
+PYTORCH_ENABLE_MPS_FALLBACK=<unset>
+
+$ python src/data_pipeline.py
+train_dir      : /Users/ajaikumarn/Desktop/brain/archive/Training
+label mapping  : {'glioma': 0, 'meningioma': 1, 'notumor': 2, 'pituitary': 3}
+valid images   : 5600   skipped: 0
+per-class count: {'glioma': 1400, 'meningioma': 1400, 'notumor': 1400, 'pituitary': 1400}
+batch images   : shape=(16, 1, 64, 64) dtype=torch.float32 min=-1.000 max=0.976
+batch labels   : [0, 2, 2, 1, 1, 2, 1, 2, 3, 3, 1, 3, 3, 0, 0, 2]  shape=(16,)
+data loader OK
+exit=0
+
+$ python src/smoke_test_wgangp_mps.py
+torch 2.14.0 | device: mps | batch_size: 4
+[PASS] real batch shape=(4, 1, 64, 64) device=mps:0
+[PASS] generator forward shape=(4, 1, 64, 64)
+[PASS] critic scores real_mean=0.0288 fake_mean=0.0356
+[PASS] gradient penalty (autograd, create_graph) gp=0.9712
+[PASS] wasserstein critic loss finite d_loss=9.7190
+[PASS] critic backward (incl. GP double-backward) 10 param grads finite
+[PASS] generator loss finite g_loss=0.0017
+[PASS] generator backward 14 param grads finite
+[PASS] critic params updated 
+[PASS] generator params updated 
+timing: critic_step=2.115s generator_step=0.315s (first step includes MPS warm-up)
+SMOKE TEST PASSED on mps (all ops ran on mps, no CPU fallback) in 2.6s
+exit=0

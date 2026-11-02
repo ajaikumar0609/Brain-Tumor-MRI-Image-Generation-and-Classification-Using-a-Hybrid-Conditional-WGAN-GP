@@ -1,0 +1,12 @@
+Pretrained EfficientNet-B3 on archive/Testing (1600 images, 0 skipped)
+
+              precision    recall  f1-score   support
+
+      glioma     1.0000    0.8525    0.9204       400
+  meningioma     0.9211    0.9925    0.9555       400
+     notumor     0.9324    1.0000    0.9650       400
+   pituitary     0.9950    0.9925    0.9937       400
+
+    accuracy                         0.9594      1600
+   macro avg     0.9621    0.9594    0.9587      1600
+weighted avg     0.9621    0.9594    0.9587      1600

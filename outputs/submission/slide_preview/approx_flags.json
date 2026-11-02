@@ -1,0 +1,140 @@
+[
+  {
+    "slide": 1,
+    "title": "Title slide",
+    "elements": {
+      "TEXT_BOX": 3,
+      "AUTO_SHAPE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 2,
+    "title": "Healthcare problem and research questions",
+    "elements": {
+      "TEXT_BOX": 3,
+      "AUTO_SHAPE": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 3,
+    "title": "Dataset, class counts and de-duplication",
+    "elements": {
+      "TEXT_BOX": 3,
+      "TABLE": 1,
+      "AUTO_SHAPE": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 4,
+    "title": "Proposed methodology",
+    "elements": {
+      "TEXT_BOX": 3,
+      "AUTO_SHAPE": 10
+    },
+    "flags": []
+  },
+  {
+    "slide": 5,
+    "title": "DCGAN, WGAN-GP and the conditional WGAN-GP",
+    "elements": {
+      "TEXT_BOX": 3,
+      "TABLE": 1,
+      "AUTO_SHAPE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 6,
+    "title": "Experimental setup and hardware",
+    "elements": {
+      "TEXT_BOX": 4,
+      "AUTO_SHAPE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 7,
+    "title": "Generated samples versus real test images",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "AUTO_SHAPE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 8,
+    "title": "FID / KID comparison (lower is better)",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "TABLE": 1,
+      "AUTO_SHAPE": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 9,
+    "title": "Does the conditional GAN generate class-specific images?",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "TABLE": 1,
+      "AUTO_SHAPE": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 10,
+    "title": "Downstream classification: conditions A, B and C",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "TABLE": 1,
+      "AUTO_SHAPE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 11,
+    "title": "Confusion matrices and class-wise findings",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "TABLE": 1,
+      "AUTO_SHAPE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 12,
+    "title": "Limitations and data-integrity risks",
+    "elements": {
+      "TEXT_BOX": 2,
+      "AUTO_SHAPE": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 13,
+    "title": "Conclusion and future work",
+    "elements": {
+      "TEXT_BOX": 3,
+      "AUTO_SHAPE": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 14,
+    "title": "Appendix: how the data-leakage problem was found",
+    "elements": {
+      "TEXT_BOX": 4,
+      "PICTURE": 1,
+      "AUTO_SHAPE": 1
+    },
+    "flags": []
+  }
+]

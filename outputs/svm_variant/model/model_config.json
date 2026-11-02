@@ -1,0 +1,60 @@
+{
+  "task": "4-class brain tumour MRI classification (glioma, meningioma, notumor, pituitary)",
+  "classes": [
+    "glioma",
+    "meningioma",
+    "notumor",
+    "pituitary"
+  ],
+  "label_mapping": {
+    "glioma": 0,
+    "meningioma": 1,
+    "notumor": 2,
+    "pituitary": 3
+  },
+  "image_size": 128,
+  "hog_variant": "hog128_cell8",
+  "hog_params": {
+    "orientations": 9,
+    "pixels_per_cell": [
+      8,
+      8
+    ],
+    "cells_per_block": [
+      2,
+      2
+    ],
+    "block_norm": "L2-Hys"
+  },
+  "n_features": 8100,
+  "kernel": "rbf",
+  "svc_params": {
+    "C": 10.0,
+    "class_weight": null,
+    "gamma": 0.0001234567901234568,
+    "kernel": "rbf"
+  },
+  "scaler": "StandardScaler fitted on the training partition only",
+  "fitted_on": "train partition only (2,311 representative images)",
+  "selected_by": "validation macro-F1 (ties within 0.002 broken by 5-fold CV macro-F1 on the training partition)",
+  "seed": 42,
+  "cv": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42) on the training partition only",
+  "train_file_list_sha256": "63cb67462db812dfb580532e4ac1067b3badb99635923dce72f6178ad28a1b9a",
+  "validation_file_list_sha256": "07fbedfd11d2b07744fc4b9398e401d97806386de8852ae91175c624f75238e7",
+  "n_support_vectors": 1996,
+  "fit_seconds_final_model": 7.69,
+  "packages": {
+    "python": "3.14.3",
+    "scikit-learn": "1.9.1",
+    "scikit-image": "0.26.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "pandas": "3.1.0"
+  },
+  "partitions_read_by_this_script": [
+    "train",
+    "val"
+  ],
+  "test_partition_read": false
+}

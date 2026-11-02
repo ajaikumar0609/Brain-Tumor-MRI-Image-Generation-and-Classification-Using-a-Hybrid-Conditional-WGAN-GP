@@ -1,0 +1,44 @@
+# Environments / dependencies
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+dist/
+build/
+*.log
+
+# OS / editor junk
+.DS_Store
+
+# Secrets
+.env
+kaggle.json
+*.pem
+*.key
+
+# Datasets (MRI images) - download separately
+archive/
+data/
+
+# Third-party models and large weights
+external_models/
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.pkl
+*.joblib
+*.npy
+*.npz
+checkpoints/
+runs/
+
+# Large generated artifacts inside outputs (keep png/csv/json/md samples)
+outputs/**/*.zip
+outputs/**/*.html
+outputs/**/*.pdf
+outputs/**/*.docx
+outputs/**/*.pptx

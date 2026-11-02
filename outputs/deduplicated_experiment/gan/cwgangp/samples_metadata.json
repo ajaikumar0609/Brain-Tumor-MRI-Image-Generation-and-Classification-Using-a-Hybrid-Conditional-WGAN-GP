@@ -1,0 +1,19 @@
+{
+  "row_labels": {
+    "0": "glioma",
+    "1": "meningioma",
+    "2": "notumor",
+    "3": "pituitary"
+  },
+  "columns": "latents torch.randn(64,100, Generator(seed=42))[:8], identical for every row and every snapshot",
+  "layout": "4 rows x 8 columns",
+  "snapshot_steps": [
+    0,
+    500,
+    1000,
+    1500,
+    2000,
+    2500,
+    3000
+  ]
+}

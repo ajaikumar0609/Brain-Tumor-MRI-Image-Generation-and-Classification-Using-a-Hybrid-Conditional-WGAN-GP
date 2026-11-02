@@ -1,0 +1,23 @@
+{
+  "split_seed": 42,
+  "run_seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 15,
+  "optimizer": "Adam lr=1e-3, batch 64",
+  "augmentation": "none",
+  "model": "SmallCNN (4 conv blocks 32-64-128-256, GAP, dropout 0.3)",
+  "device": "mps",
+  "n_train_real": 4480,
+  "n_val_real": 1120,
+  "synthetic_per_class": 1400,
+  "synthetic_source": "outputs/cwgangp_3000/checkpoint_step_3000.pth",
+  "synthetic_seed": 3001,
+  "synthetic_labels": "the label each image was generated for; correctness unverified",
+  "train_val_file_list_sha256": "8bf33428b6a5e6298c0d77e2f3f586c958f41d22454a26c03dc0460a7fe93926",
+  "test_dir": "archive/Testing (read only after training; never used for selection)",
+  "smoke": false,
+  "torch_version": "2.14.0"
+}

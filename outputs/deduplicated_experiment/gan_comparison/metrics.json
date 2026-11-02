@@ -1,0 +1,138 @@
+{
+  "aggregate": {
+    "Real train reps (class-matched, reference)": {
+      "fid_mean": 34.20023851884995,
+      "fid_std_across_seeds": 0.29107023831600953,
+      "kid_mean": -0.00030828237533569335,
+      "kid_std_across_seeds": 0.000126177616390543,
+      "kid_mean_within_seed_subset_std": 0.00025691123504032707,
+      "n_seeds": 3,
+      "n_generated_per_seed": 492,
+      "n_real": 492
+    },
+    "DCGAN": {
+      "fid_mean": 154.69131982460917,
+      "fid_std_across_seeds": 1.903688553331943,
+      "kid_mean": 0.12943656762441,
+      "kid_std_across_seeds": 0.002448938570434518,
+      "kid_mean_within_seed_subset_std": 0.0026528556700325424,
+      "n_seeds": 3,
+      "n_generated_per_seed": 492,
+      "n_real": 492
+    },
+    "WGAN-GP": {
+      "fid_mean": 182.1133969077051,
+      "fid_std_across_seeds": 1.4858209824528268,
+      "kid_mean": 0.1635365851720174,
+      "kid_std_across_seeds": 0.0020151048060339225,
+      "kid_mean_within_seed_subset_std": 0.0025611255726838127,
+      "n_seeds": 3,
+      "n_generated_per_seed": 492,
+      "n_real": 492
+    },
+    "cWGAN-GP": {
+      "fid_mean": 177.84130712688088,
+      "fid_std_across_seeds": 1.8030442084591172,
+      "kid_mean": 0.15763290882110595,
+      "kid_std_across_seeds": 0.0023747789597462856,
+      "kid_mean_within_seed_subset_std": 0.00263798385315614,
+      "n_seeds": 3,
+      "n_generated_per_seed": 492,
+      "n_real": 492
+    }
+  },
+  "per_class_cwgangp": [
+    {
+      "class": "glioma",
+      "n_generated_per_seed": 196,
+      "n_real": 196,
+      "fid_mean": 190.87044102918514,
+      "fid_std": 4.098857557627411,
+      "kid_mean": 0.15722645521163942,
+      "kid_std": 0.004154990694081315,
+      "kid_subset_size": 100,
+      "reliability_note": "n>=100 (still small for 2048-d FID)",
+      "own_class_is_lowest_kid_row_wise": false,
+      "own_label_is_lowest_kid_column_wise": true
+    },
+    {
+      "class": "meningioma",
+      "n_generated_per_seed": 122,
+      "n_real": 122,
+      "fid_mean": 213.55143490932653,
+      "fid_std": 1.0546246283260643,
+      "kid_mean": 0.15491415659586588,
+      "kid_std": 0.0003658974693688684,
+      "kid_subset_size": 97,
+      "reliability_note": "n>=100 (still small for 2048-d FID)",
+      "own_class_is_lowest_kid_row_wise": true,
+      "own_label_is_lowest_kid_column_wise": false
+    },
+    {
+      "class": "notumor",
+      "n_generated_per_seed": 46,
+      "n_real": 46,
+      "fid_mean": 242.11475842919117,
+      "fid_std": 3.082447209697752,
+      "kid_mean": 0.16603256305058797,
+      "kid_std": 0.0020192702001204086,
+      "kid_subset_size": 36,
+      "reliability_note": "n<100: FID/KID indicative only",
+      "own_class_is_lowest_kid_row_wise": false,
+      "own_label_is_lowest_kid_column_wise": true
+    },
+    {
+      "class": "pituitary",
+      "n_generated_per_seed": 128,
+      "n_real": 128,
+      "fid_mean": 238.99574606854512,
+      "fid_std": 3.0040539565718563,
+      "kid_mean": 0.2087475562095642,
+      "kid_std": 0.004433508856450476,
+      "kid_subset_size": 100,
+      "reliability_note": "n>=100 (still small for 2048-d FID)",
+      "own_class_is_lowest_kid_row_wise": false,
+      "own_label_is_lowest_kid_column_wise": false
+    }
+  ],
+  "class_confusion_kid_cwgangp": {
+    "rows": [
+      "glioma",
+      "meningioma",
+      "notumor",
+      "pituitary"
+    ],
+    "cols": [
+      "glioma",
+      "meningioma",
+      "notumor",
+      "pituitary"
+    ],
+    "kid": [
+      [
+        0.15722645521163942,
+        0.14965585629145303,
+        0.1785646152496338,
+        0.20879758516947428
+      ],
+      [
+        0.16813172419865924,
+        0.15490439414978027,
+        0.18743276278177898,
+        0.20986879348754883
+      ],
+      [
+        0.17464506785074868,
+        0.15715549310048424,
+        0.16613242785135904,
+        0.20995577971140544
+      ],
+      [
+        0.20273768504460654,
+        0.18361845254898074,
+        0.21949220021565757,
+        0.2088275170326233
+      ]
+    ]
+  }
+}

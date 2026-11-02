@@ -1,0 +1,277 @@
+{
+  "generated_by": "scripts/verify_submission_package.py",
+  "checks_passed": "44/44",
+  "deliverables": [
+    {
+      "deliverable": "FINAL_REPORT.pdf",
+      "path": "outputs/submission/FINAL_REPORT.pdf",
+      "bytes": 3802191,
+      "sha256": "21c2ff61de83e4f95d23ddad95b423435f0214617fffbe980255e9af2b076365",
+      "verification": "opens; 9 pages; text extracted; numbers cross-checked"
+    },
+    {
+      "deliverable": "FINAL_REPORT.docx",
+      "path": "outputs/submission/FINAL_REPORT.docx",
+      "bytes": 2397547,
+      "sha256": "05bd54008b18d9bd0a4527ab6b09ce5f96d166c7b5c585aca728839ccab4ed96",
+      "verification": "opens; 8 tables, 8 figures; numbers cross-checked"
+    },
+    {
+      "deliverable": "IA3_Presentation.pptx",
+      "path": "outputs/submission/IA3_Presentation.pptx",
+      "bytes": 1819029,
+      "sha256": "22746b641907afbbdba9995d9283b69be3ae20b1de77f183a45c6cbd0991d9a7",
+      "verification": "opens; 14 slides; shapes in bounds; pictures decode; numbers cross-checked; layout not visually rendered (no renderer available)"
+    },
+    {
+      "deliverable": "VIVA_QUESTIONS.md",
+      "path": "outputs/submission/VIVA_QUESTIONS.md",
+      "bytes": 6439,
+      "sha256": "36dddf0853113f8b074e6ebea0d188336b67aa327f0a2d11c80cafb2010393bf",
+      "verification": "readable; numbers cross-checked"
+    },
+    {
+      "deliverable": "SUBMISSION_CHECKLIST.md",
+      "path": "outputs/submission/SUBMISSION_CHECKLIST.md",
+      "bytes": 4737,
+      "sha256": "1028ac22ab2e215de66cfb525846b2b0bd8c001e8f54183e9753870c40e38a64",
+      "verification": "readable; numbers cross-checked"
+    },
+    {
+      "deliverable": "README.md",
+      "path": "outputs/submission/README.md",
+      "bytes": 4711,
+      "sha256": "9378fdbbef9377e6e8d723a0831896c032bb8414702da8529bc196231a5866fe",
+      "verification": "readable; numbers cross-checked"
+    },
+    {
+      "deliverable": "IA3_SOURCE_CODE.zip",
+      "path": "outputs/submission/IA3_SOURCE_CODE.zip",
+      "bytes": 668765,
+      "sha256": "df87ab5f9ffbd2e9bc6a635c642295d0e7d6d635ea6957dc6428b5e6f75c98c9",
+      "verification": "integrity ok; 70 files; no data/images/weights/secrets/absolute paths"
+    }
+  ],
+  "checks": [
+    {
+      "check": "PDF opens and has pages",
+      "pass": true,
+      "detail": "9 pages"
+    },
+    {
+      "check": "PDF contains '154.7'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PDF contains '0.869'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PDF contains 'DCGAN had the best FID'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PDF contains '[to be filled in]'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PDF contains 'unverified'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PDF contains 'Figure 8'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PDF contains 'no clinical claim'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PDF: every decimal matches a saved/derived value",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PDF: no figure placeholders left (images embedded)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "DOCX opens; headings, tables and figures present",
+      "pass": true,
+      "detail": "8 tables, 8 figures"
+    },
+    {
+      "check": "DOCX contains '154.7'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "DOCX contains '0.869'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "DOCX contains 'DCGAN had the best FID'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "DOCX contains '[to be filled in]'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "DOCX contains 'unverified'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "DOCX: every decimal matches a saved/derived value",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PPTX opens; 12-16 slides",
+      "pass": true,
+      "detail": "14 slides"
+    },
+    {
+      "check": "PPTX: all shapes inside the slide",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "PPTX: pictures decode and tables exist",
+      "pass": true,
+      "detail": "6 pictures, 6 tables"
+    },
+    {
+      "check": "PPTX contains 'DCGAN achieved the best FID'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX contains 'highest mean'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX contains '[to be filled in]'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX contains 'UNVERIFIED'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX contains 'SUPERSEDED'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX contains 'patient'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX does not claim 'superior'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX does not claim 'outperforms'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX does not claim 'clinically validated'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX does not claim 'proves'",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PPTX: every decimal matches a saved/derived value",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "VIVA_QUESTIONS.md non-empty and numbers match",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "SUBMISSION_CHECKLIST.md non-empty and numbers match",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "README.md non-empty and numbers match",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "README names unverified dataset + external downloads",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "ZIP integrity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "ZIP has no images, weights, archives or env files",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "ZIP has the required parts",
+      "pass": true,
+      "detail": "70 files"
+    },
+    {
+      "check": "ZIP has no machine-specific absolute paths",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "ZIP has no secret-like strings in code",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "ZIP python files parse",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "ZIP: every python file compiles after unpacking",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "ZIP: key scripts start and print --help from a clean unpacked tree (without running anything)",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "earlier results preserved",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "threshold": 0.99,
+  "representative_rule": "prefer non-augmented filename, then original Training over Testing, then path order",
+  "partition_file_list_sha256": {
+    "train": "66811b456c01b801f23e9402bc65c999dcd6d6b2c0f94282277d7af60a710af6",
+    "val": "50b717cf6069a5b5d7e9b4c9f0c98f115602281a038b20e89a9ab6ef6d84d9a6",
+    "test": "7148ef9d92a7772e5afaa948008e1f6fe7ac98047418658aa31d42aa1aae70de"
+  },
+  "manifest_sha256": "547956591a7f484860bed023cc98d8648de7172c23e12b02be815d2984719879"
+}

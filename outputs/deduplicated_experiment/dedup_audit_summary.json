@@ -1,0 +1,173 @@
+{
+  "method": "32x32 mean-removed cosine, 8 orientations, edge if sim>=threshold or byte-identical; connected components",
+  "threshold": 0.98,
+  "pool_images": 7200,
+  "exact_hash_duplicate_groups": 153,
+  "n_clusters": 3479,
+  "cluster_size_histogram_size_to_count": {
+    "1": 1543,
+    "2": 1681,
+    "3": 65,
+    "4": 60,
+    "5": 21,
+    "6": 24,
+    "7": 8,
+    "8": 13,
+    "9": 4,
+    "10": 6,
+    "11": 2,
+    "12": 4,
+    "13": 1,
+    "14": 1,
+    "15": 3,
+    "16": 5,
+    "17": 4,
+    "18": 4,
+    "19": 1,
+    "20": 1,
+    "21": 1,
+    "22": 2,
+    "23": 3,
+    "24": 3,
+    "25": 2,
+    "26": 3,
+    "27": 1,
+    "29": 2,
+    "31": 2,
+    "33": 1,
+    "36": 1,
+    "38": 2,
+    "48": 1,
+    "54": 1,
+    "62": 1,
+    "81": 1,
+    "83": 1
+  },
+  "max_cluster_size": 83,
+  "clusters_spanning_original_train_and_test": 756,
+  "quarantined_clusters": {
+    "conflicting_labels": 8,
+    "all_augmented_filenames": 172
+  },
+  "quarantined_images": 207,
+  "augmented_filename_images": 203,
+  "threshold_sensitivity": {
+    "0.999": {
+      "n_clusters": 3927,
+      "max_cluster_size": 43,
+      "n_images_in_multi_clusters": 5394
+    },
+    "0.995": {
+      "n_clusters": 3857,
+      "max_cluster_size": 58,
+      "n_images_in_multi_clusters": 5438
+    },
+    "0.99": {
+      "n_clusters": 3782,
+      "max_cluster_size": 63,
+      "n_images_in_multi_clusters": 5489
+    },
+    "0.98": {
+      "n_clusters": 3479,
+      "max_cluster_size": 83,
+      "n_images_in_multi_clusters": 5657
+    }
+  },
+  "representatives": 3295,
+  "partition_class_counts_representatives": {
+    "train": {
+      "glioma": 918,
+      "meningioma": 566,
+      "notumor": 227,
+      "pituitary": 600
+    },
+    "val": {
+      "glioma": 196,
+      "meningioma": 122,
+      "notumor": 46,
+      "pituitary": 128
+    },
+    "test": {
+      "glioma": 196,
+      "meningioma": 122,
+      "notumor": 46,
+      "pituitary": 128
+    }
+  },
+  "partition_totals": {
+    "train": 2311,
+    "val": 492,
+    "test": 492
+  },
+  "clusters_in_more_than_one_partition": 0,
+  "cross_partition_representative_similarity": {
+    "train_vs_val": {
+      "n_query": 494,
+      "max_similarity": 0.979629397392273,
+      "n_ge_0.98": 0,
+      "n_ge_0.95": 212,
+      "n_ge_0.90": 375,
+      "median": 0.9438892006874084
+    },
+    "train_vs_test": {
+      "n_query": 494,
+      "max_similarity": 0.9798033833503723,
+      "n_ge_0.98": 0,
+      "n_ge_0.95": 190,
+      "n_ge_0.90": 353,
+      "median": 0.9373584389686584
+    },
+    "val_vs_test": {
+      "n_query": 494,
+      "max_similarity": 0.979506254196167,
+      "n_ge_0.98": 0,
+      "n_ge_0.95": 57,
+      "n_ge_0.90": 182,
+      "median": 0.875967800617218
+    }
+  },
+  "caveats": [
+    "heuristic similarity, not ground truth; no patient ids so same-patient neighbouring slices are not detected",
+    "augmented-looking files are quarantined by filename only; augmented files with unmarked names would not be recognised"
+  ],
+  "stage2_refinement": {
+    "refined_threshold": 0.97,
+    "method": "96x96 shift-tolerant (+/-4px) correlation in the coarse-matched orientation for best 32x32 matches >=0.90",
+    "scored": {
+      "val": {
+        "n_queries": 494,
+        "n_scored": 375,
+        "refined_ge_0.99": 0,
+        "refined_ge_0.98": 0,
+        "refined_ge_0.97": 2,
+        "refined_ge_0.95": 8,
+        "max_refined": 0.974093496799469
+      },
+      "test": {
+        "n_queries": 494,
+        "n_scored": 353,
+        "refined_ge_0.99": 0,
+        "refined_ge_0.98": 1,
+        "refined_ge_0.97": 2,
+        "refined_ge_0.95": 14,
+        "max_refined": 0.9817549586296082
+      },
+      "val_vs_test": {
+        "n_queries": 494,
+        "n_scored": 191,
+        "refined_ge_0.99": 0,
+        "refined_ge_0.98": 0,
+        "refined_ge_0.97": 0,
+        "refined_ge_0.95": 1,
+        "max_refined": 0.954577624797821
+      }
+    },
+    "quarantined_images": {
+      "Training/notumor/Tr-no_1.jpg": "refined near-copy of train representative Training/notumor/Tr-no_1191.jpg (refined sim 0.9716, coarse 0.9781, orientation 2)",
+      "Training/notumor/Tr-no_362.jpg": "refined near-copy of train representative Training/notumor/Tr-no_1317.jpg (refined sim 0.9741, coarse 0.9474, orientation 0)",
+      "Training/notumor/Tr-no_1271.jpg": "refined near-copy of train representative Training/notumor/Tr-no_214.jpg (refined sim 0.9767, coarse 0.9675, orientation 0)",
+      "Training/notumor/Tr-no_244.jpg": "refined near-copy of train representative Training/notumor/Tr-no_1307.jpg (refined sim 0.9818, coarse 0.9795, orientation 0)"
+    },
+    "n_quarantined_by_refinement": 4
+  }
+}

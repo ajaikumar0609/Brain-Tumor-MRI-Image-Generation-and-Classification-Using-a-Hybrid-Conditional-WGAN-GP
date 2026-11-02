@@ -1,0 +1,131 @@
+{
+  "config": {
+    "condition": "real_only_matched_size",
+    "description": "real-only, resampled with replacement to the size of the real+synthetic condition",
+    "resample_seed": 5001,
+    "split_seed": 42,
+    "run_seeds": [
+      42,
+      43,
+      44
+    ],
+    "epochs": 15,
+    "device": "mps",
+    "smoke": false,
+    "manifest_stats": {
+      "n_examples": 10080,
+      "per_class": 2520,
+      "unique_files_used": 3998,
+      "unique_files_available": 4480,
+      "unique_used_per_class": {
+        "glioma": 1007,
+        "meningioma": 986,
+        "notumor": 1006,
+        "pituitary": 999
+      },
+      "max_multiplicity": 9,
+      "unused_files": 482
+    },
+    "manifest_sha256": "eefda04774fcaab802a41a63cb1d97af7564f461bd52fd2200416509dbdc1be8",
+    "clean_experiment_dir": "/Users/ajaikumarn/Desktop/brain/outputs/downstream_classification_clean",
+    "same_as_clean": "CNN, preprocessing, Adam 1e-3, batch 64, no augmentation, real-only validation",
+    "test_set_role": "final evaluation of validation-selected weights only (also used earlier in the project as the FID/KID reference and for a pretrained-classifier sanity check, but never to train any GAN or to select anything in this experiment)",
+    "torch_version": "2.14.0"
+  },
+  "condition_C": {
+    "accuracy": {
+      "mean": 0.8689583333333334,
+      "std": 0.027281327558118074,
+      "values": [
+        0.893125,
+        0.874375,
+        0.839375
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.8676832249509094,
+      "std": 0.026027001268240247,
+      "values": [
+        0.8908020452761327,
+        0.8727534541438134,
+        0.8394941754327823
+      ]
+    },
+    "weighted_f1": {
+      "mean": 0.8676832249509094,
+      "std": 0.026027001268240247,
+      "values": [
+        0.8908020452761327,
+        0.8727534541438134,
+        0.8394941754327823
+      ]
+    },
+    "per_class_f1_mean": {
+      "glioma": 0.8095376393451437,
+      "meningioma": 0.8180781431632257,
+      "notumor": 0.9357590699584302,
+      "pituitary": 0.9073580473368383
+    },
+    "per_class_precision_mean": {
+      "glioma": 0.8610663763430484,
+      "meningioma": 0.816208080274499,
+      "notumor": 0.893582864748249,
+      "pituitary": 0.939634504784173
+    },
+    "per_class_recall_mean": {
+      "glioma": 0.7666666666666666,
+      "meningioma": 0.8383333333333334,
+      "notumor": 0.9825,
+      "pituitary": 0.8883333333333333
+    },
+    "mean_confusion_matrix": [
+      [
+        306.6666666666667,
+        48.333333333333336,
+        33.333333333333336,
+        11.666666666666666
+      ],
+      [
+        39.0,
+        335.3333333333333,
+        13.666666666666666,
+        12.0
+      ],
+      [
+        4.666666666666667,
+        1.6666666666666667,
+        393.0,
+        0.6666666666666666
+      ],
+      [
+        7.0,
+        37.666666666666664,
+        0.0,
+        355.3333333333333
+      ]
+    ],
+    "n_train": 10080,
+    "n_runs": 3
+  },
+  "recorded_A_and_B_from": "/Users/ajaikumarn/Desktop/brain/outputs/downstream_classification_clean/summary.json",
+  "paired_accuracy_differences": {
+    "B_minus_A": [
+      0.11375000000000002,
+      0.012499999999999956,
+      -0.0050000000000000044
+    ],
+    "C_minus_A": [
+      0.13624999999999998,
+      0.04125000000000001,
+      -0.004375000000000018
+    ],
+    "B_minus_C": [
+      -0.022499999999999964,
+      -0.028750000000000053,
+      -0.0006249999999999867
+    ],
+    "mean_B_minus_A": 0.040416666666666656,
+    "mean_C_minus_A": 0.05770833333333333,
+    "mean_B_minus_C": -0.017291666666666667
+  }
+}

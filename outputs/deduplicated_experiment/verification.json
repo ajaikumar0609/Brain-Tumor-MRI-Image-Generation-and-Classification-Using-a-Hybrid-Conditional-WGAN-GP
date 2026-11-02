@@ -1,0 +1,117 @@
+[
+  {
+    "check": "1a no cluster appears in more than one partition",
+    "pass": true,
+    "detail": "3297 clusters"
+  },
+  {
+    "check": "1b representatives: one per cluster, no file in two partitions",
+    "pass": true,
+    "detail": "train 2311 val 492 test 492"
+  },
+  {
+    "check": "1c quarantined clusters (label conflicts / augmented) excluded from every partition",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "1d train file-list hash matches split_config",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "1d val file-list hash matches split_config",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "1d test file-list hash matches split_config",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "1e manifest hash matches split_config",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "2/3 DCGAN: trained exactly on the manifest train partition (hash), never on val/test/quarantine",
+    "pass": true,
+    "detail": "images_used 2311"
+  },
+  {
+    "check": "9 DCGAN: counters",
+    "pass": true,
+    "detail": "gen 3000 critic/disc 3000 device mps runtime 293.443s"
+  },
+  {
+    "check": "9 DCGAN: sample grids at 0,500,...,3000",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "2/3 WGAN-GP: trained exactly on the manifest train partition (hash), never on val/test/quarantine",
+    "pass": true,
+    "detail": "images_used 2311"
+  },
+  {
+    "check": "9 WGAN-GP: counters",
+    "pass": true,
+    "detail": "gen 3000 critic/disc 15000 device mps runtime 1759.343s"
+  },
+  {
+    "check": "9 WGAN-GP: sample grids at 0,500,...,3000",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "2/3 cWGAN-GP: trained exactly on the manifest train partition (hash), never on val/test/quarantine",
+    "pass": true,
+    "detail": "images_used 2311"
+  },
+  {
+    "check": "9 cWGAN-GP: counters",
+    "pass": true,
+    "detail": "gen 3000 critic/disc 15000 device mps runtime 2148.99s"
+  },
+  {
+    "check": "9 cWGAN-GP: sample grids at 0,500,...,3000",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "4a downstream used this manifest",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "4b GAN used for B trained on exactly the train partition",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "4c Condition C resampling uses only train-partition files",
+    "pass": true,
+    "detail": "2029/2311 files, max mult 12"
+  },
+  {
+    "check": "4d composition: B and C have identical per-class counts and size",
+    "pass": true,
+    "detail": "{'A_real_only': [918, 566, 227, 600], 'B_real_plus_cwgangp_synthetic': [1640, 1288, 949, 1322], 'C_real_only_matched_composition': [1640, 1288, 949, 1322]}"
+  },
+  {
+    "check": "5 every run was evaluated on exactly the test partition (disjoint from train/val); predictions saved",
+    "pass": true,
+    "detail": "9 prediction files"
+  },
+  {
+    "check": "5b FID/KID reference = test partition; GAN checkpoints match manifest",
+    "pass": true,
+    "detail": ""
+  },
+  {
+    "check": "10 earlier results preserved (preliminary summary, previous report versions, old checkpoints)",
+    "pass": true,
+    "detail": ""
+  }
+]

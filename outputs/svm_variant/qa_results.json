@@ -1,0 +1,316 @@
+{
+ "passed": 62,
+ "total": 62,
+ "checks": [
+  {
+   "check": "saved model reloads from disk",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "test predictions are for exactly the split's test files, in order, with the right labels",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "accuracy recomputed from saved predictions equals the saved value",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "macro precision / recall / F1 recomputed from saved predictions equal the saved values",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "confusion matrix recomputed equals the saved matrix",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "per-class values equal recomputed values",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "fresh single-image predictions from the reloaded model equal the saved predictions (13 images spread over the test set)",
+   "pass": true,
+   "detail": "0 mismatches"
+  },
+  {
+   "check": "selection script read only train/validation; test flag false in the saved config",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "model file was written before the test evaluation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "evaluated model hash equals the model file",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "test evaluation lock: second run is refused",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "leakage evidence: no cluster/file crosses partitions; max similarity below 0.98",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "selection was by validation (best validation macro-F1 is the selected candidate)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX: logo + figures, tables = captioned + note boxes + TOC + evaluation form",
+   "pass": true,
+   "detail": "15 images, 20 tables, 2 note boxes"
+  },
+  {
+   "check": "every image captioned; every data table captioned",
+   "pass": true,
+   "detail": "14 figure captions, 16 table captions"
+  },
+  {
+   "check": "DOCX contains '0.866'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.841'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.836'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '0.850'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '[Student name'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '25AI2004'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'Ms. Gethsia P'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'scheduled on'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'not proven'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'unverified'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'CC BY 4.0'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'not a medical device'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'Support Vector Machine'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'RBF'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'HOG'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains 'no automated browser-level'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '13 passed'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX contains '7/7'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'TITLE OF MICRO PROJECT'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'NAMES OF THE STUDENTS'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'Name (Reg No)'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX has no leftover 'presentation held on'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "DOCX mentions the GAN project only as the earlier/copied project (never as SVM results)",
+   "pass": true,
+   "detail": "[' The SVM experiment and the web application live in a separate working copy of an earlier GAN-based project; the copied GAN code and results are kept only as reference and none of them is used for the SVM results.']"
+  },
+  {
+   "check": "DOCX: every decimal matches a saved/derived value",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "11 references, all cited, numbered by first citation",
+   "pass": true,
+   "detail": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]"
+  },
+  {
+   "check": "PDF opens; metrics, evaluation form and references present",
+   "pass": true,
+   "detail": "31 pages"
+  },
+  {
+   "check": "TOC page numbers agree with the PDF",
+   "pass": true,
+   "detail": "{'INTRODUCTION': 1, 'LITERATURE REVIEW': 3, 'METHODOLOGY': 5, 'FABRICATION/SIMULATION/PROGRAM OR CODE/DESIGN': 10, 'RESULTS AND INTERPRETATION': 18, 'CONCLUSION AND FUTURE SCOPE': 24, 'REFERENCES': 26, '1.1': 1, '1.2': 1, '1.3': 2, '1.4': 2}"
+  },
+  {
+   "check": "PDF images embedded (= DOCX images)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "evaluation form kept with blank marks",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX: 14 slides, 16:9, shapes inside the slide, pictures decode, no text under 10 pt",
+   "pass": true,
+   "detail": "8 pictures; oob []; small []"
+  },
+  {
+   "check": "PPTX contains '0.866'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '0.841'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '0.835'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '0.894'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'RBF'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'HOG'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'UNVERIFIED'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'NOT proven'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '[Student name'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'Questions?'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains 'not a medical device'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX contains '29/10/26'",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX: no GAN/NeuroVision content",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX: every decimal matches a saved/derived value",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "PPTX: no literal escape sequences",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "PPTX and DOCX agree on key metrics",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "original project ~/Desktop/brain unchanged (23,930 files: same sizes and mtimes)",
+   "pass": true,
+   "detail": "23930 files"
+  }
+ ]
+}

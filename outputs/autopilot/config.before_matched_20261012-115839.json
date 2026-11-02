@@ -1,0 +1,33 @@
+{
+  "poll_seconds": 15,
+  "poll_max_seconds": 60,
+  "max_claude_calls": 14,
+  "claude_max_turns": 10,
+  "claude_max_budget_usd_per_call": 1.5,
+  "claude_timeout_seconds": 1200,
+  "claude_bin": "claude",
+  "claude_model": null,
+  "decision_with_claude": true,
+  "max_repairs_per_stage": 2,
+  "stage_timeouts_seconds": {
+    "A": 7200,
+    "B": 1800,
+    "C": 5400,
+    "D": 3600
+  },
+  "max_total_training_seconds": 5400,
+  "python_bin": null,
+  "min_free_disk_gb": 5,
+  "verify_checkpoint_counters": true,
+  "downstream_seeds": [
+    42,
+    43,
+    44
+  ],
+  "downstream_epochs": 15,
+  "downstream_synthetic_per_class": 1400,
+  "downstream_dir": "outputs/downstream_classification_clean",
+  "downstream_preliminary_dir": "outputs/downstream_classification",
+  "downstream_gan_ckpt": "outputs/cwgangp_clean_3000/checkpoint_step_3000.pth",
+  "require_leakage_free_downstream": true
+}

@@ -1,0 +1,165 @@
+Phase E — Matched-Sample-Count Control for Leakage-Free Classification
+Objective
+
+Improve the scientific validity of our Brain Tumor MRI IA3 experiment by determining whether synthetic augmentation improves classification beyond the effect of simply increasing the number of training examples.
+
+Do not begin this task until the leakage-free cWGAN-GP training and clean downstream classification rerun have completed and their actual results have been verified.
+
+Project root:
+/Users/ajaikumarn/Desktop/brain
+
+Project title:
+Brain Tumor MRI Image Generation and Classification Using a Hybrid Conditional WGAN-GP
+
+1. Preconditions
+
+Inspect the current autopilot state, process list, training logs, dataset manifests, checkpoints and downstream classification outputs.
+
+Verify that:
+
+The clean cWGAN-GP checkpoint completed 3,000 generator updates and 15,000 critic updates.
+
+The GAN was trained only on the 4,480 files in the fixed CNN-training partition, with 1,120 images per class.
+
+None of the 1,120 CNN-validation files or 1,600 archive/Testing/ files were used to train this clean GAN.
+
+The clean real-only and real-plus-synthetic CNN results exist and their configurations, seeds and model architecture are recorded.
+
+The classifier uses the same predefined train/validation partition across conditions.
+
+The preliminary leakage-affected experiment remains preserved.
+
+If any precondition fails, stop and report the exact problem. Do not launch duplicate training jobs.
+
+2. Implement one additional control experiment
+
+The completed downstream experiment compares:
+
+Condition A: 4,480 real training images.
+
+Condition B: 4,480 real training images plus 5,600 synthetic images, for 10,080 total training examples.
+
+This comparison is confounded by training-set size: Condition B has substantially more examples.
+
+Add:
+
+Condition C — Real-only, sample-count-matched training
+
+Construct a training dataset of 10,080 examples using only the 4,480 permitted real training images. Resample the real images with replacement, using a fixed seed and class-balanced sampling, to match the augmented condition's total sample count.
+
+The resulting class distribution should contain 2,520 training examples per class. Repeated images are expected and must be documented; do not claim this creates 10,080 unique real images.
+
+Do not add synthetic images to Condition C.
+
+3. Keep the experiment controlled
+
+Reuse the existing downstream classification implementation.
+
+Keep fixed across Conditions A, B and C:
+
+CNN architecture and initialisation policy.
+
+Image preprocessing and resolution.
+
+Optimizer and learning-rate settings.
+
+Stratified train/validation split.
+
+Training seeds.
+
+Number of epochs and effective optimizer-update schedule.
+
+Batch size and evaluation procedure.
+
+Use the same three random seeds as the completed clean experiment, if confirmed by its saved configuration.
+
+For Condition C, construct the fixed-size resampled real dataset so its training-set length equals Condition B's 10,080 examples. Ensure all resampling is performed strictly within the CNN-training partition.
+
+Do not change the GAN architecture, generate a new GAN checkpoint, or increase the number of synthetic images for this task.
+
+4. Evaluation protocol
+
+Train Condition C using the permitted CNN-training images only. Use the existing validation partition only for validation and any already-specified checkpoint selection.
+
+Once all settings are fixed, evaluate Condition C on archive/Testing/ and compare its metrics with the saved results for Conditions A and B.
+
+The test set must not be used to tune hyperparameters, select seeds, alter the sampling strategy, or decide how many synthetic images to generate.
+
+The test set has been used in earlier project evaluations, so do not describe it as completely untouched across the entire project history. Describe its specific role in this pre-specified control experiment accurately.
+
+Calculate and report:
+
+Accuracy.
+
+Per-class precision, recall and F1-score.
+
+Macro-F1 and weighted-F1.
+
+Confusion matrix.
+
+Per-seed results and mean ± standard deviation.
+
+Do not invent missing metrics or claim that synthetic data is beneficial simply because one condition has a higher mean score.
+
+5. Interpret the results
+
+Compare all three conditions:
+
+Condition | Training examples | Purpose
+A. Real only | 4,480 | Baseline
+B. Real + synthetic | 10,080 | Measures observed performance with synthetic augmentation and more examples
+C. Real-only, matched size | 10,080 | Controls for training-set size using resampled real images
+
+(The table above was flattened to one cell per line by the page-text extraction; the rows are reproduced here in their evident layout.)
+
+Explain what the matched-size control supports and what it cannot establish. In particular, oversampled real images are duplicates, whereas generated samples may introduce diversity or label noise.
+
+The synthetic labels are requested cWGAN-GP conditioning labels and have not been proven to correspond reliably to tumor-specific anatomy. Preserve this limitation in the interpretation.
+
+6. Outputs and preservation
+
+Write the new experiment into a separate directory:
+
+outputs/downstream_classification_matched/
+
+Save:
+
+Per-seed metrics and predictions.
+
+The aggregate classification report.
+
+Confusion matrices.
+
+Experiment configuration and resampling manifest.
+
+Training logs.
+
+A CSV comparing Conditions A, B and C.
+
+A concise interpretation report explaining the control and its limitations.
+
+Preserve all existing outputs, including preliminary results. Use versioned filenames if any existing summary file must be updated.
+
+Do not modify the original dataset or existing GAN checkpoints.
+
+7. Verify and finish
+
+Before marking this phase complete:
+
+Confirm no validation or test image appears in the CNN-training manifest.
+
+Confirm Condition C uses exactly 10,080 training examples, with 2,520 examples per class.
+
+Confirm all three seeds completed or clearly report any failed seed.
+
+Verify every reported number against the saved metrics.
+
+Record the actual runtime, hardware and exit statuses.
+
+Update the final report, comparison table and relevant slide outline with the control results, retaining earlier versions.
+
+Do not run more experiments automatically after this phase. Produce a final handoff with the new metrics, comparison and any unresolved scientific limitations so the project can be reviewed before submission.
+
+Stop conditions
+
+Stop without claiming success if the clean checkpoint or split cannot be verified, the test data is found in a training manifest, a run fails, or the required computation cannot fit within the existing time budget. Preserve partial outputs and explain what remains.

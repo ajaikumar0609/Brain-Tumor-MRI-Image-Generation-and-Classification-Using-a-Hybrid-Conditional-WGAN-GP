@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "error": "FloatingPointError: non-finite critic loss/grad at gen step 2861",
+  "device": "mps",
+  "critic_updates_completed": 14301,
+  "generator_updates_completed": 2860,
+  "all_losses_and_grads_finite": false
+}

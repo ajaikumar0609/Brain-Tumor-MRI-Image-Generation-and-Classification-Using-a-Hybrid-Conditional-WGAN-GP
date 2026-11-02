@@ -1,0 +1,10 @@
+{
+  "row_labels": {
+    "0": "glioma",
+    "1": "meningioma",
+    "2": "notumor",
+    "3": "pituitary"
+  },
+  "columns": "latents all_z[0:8] from seed 42 (torch.randn(64,100, Generator(seed))[:8]), identical for every row",
+  "layout": "4 rows x 8 columns"
+}

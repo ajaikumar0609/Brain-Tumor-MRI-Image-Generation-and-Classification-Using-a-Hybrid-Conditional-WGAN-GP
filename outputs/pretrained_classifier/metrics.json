@@ -1,0 +1,54 @@
+{
+  "accuracy": 0.959375,
+  "macro_f1": 0.958653367621075,
+  "weighted_f1": 0.958653367621075,
+  "per_class": {
+    "glioma": {
+      "precision": 1.0,
+      "recall": 0.8525,
+      "f1-score": 0.9203778677462888,
+      "support": 400.0
+    },
+    "meningioma": {
+      "precision": 0.9211136890951276,
+      "recall": 0.9925,
+      "f1-score": 0.9554753309265944,
+      "support": 400.0
+    },
+    "notumor": {
+      "precision": 0.9324009324009324,
+      "recall": 1.0,
+      "f1-score": 0.9650180940892642,
+      "support": 400.0
+    },
+    "pituitary": {
+      "precision": 0.9949874686716792,
+      "recall": 0.9925,
+      "f1-score": 0.9937421777221527,
+      "support": 400.0
+    }
+  },
+  "images_evaluated": 1600,
+  "images_evaluated_per_class": {
+    "glioma": 400,
+    "meningioma": 400,
+    "notumor": 400,
+    "pituitary": 400
+  },
+  "images_skipped": 0,
+  "skipped_details": [],
+  "device": "mps",
+  "inference_seconds": 25.04,
+  "images_per_second": 63.9,
+  "batch_size": 32,
+  "torch_version": "2.14.0",
+  "checkpoint": "external_models/brain_tumor_classifier/weights/best_model.pth",
+  "test_dir": "archive/Testing",
+  "class_order": [
+    "glioma",
+    "meningioma",
+    "notumor",
+    "pituitary"
+  ],
+  "preprocessing": "Grayscale(1) -> Resize(224,224) -> ToTensor -> Normalize(0.1856,0.1892)"
+}

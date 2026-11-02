@@ -1,0 +1,19 @@
+table,name,metric,mean,std_across_seeds,n_seeds,notes
+gan_quality,"Real train (class-balanced, reference)",FID,14.128638939111775,0.111506348100809,3,n_generated=1600 vs n_real=1600
+gan_quality,"Real train (class-balanced, reference)",KID_x1000,0.7029581069946289,0.2233365684662892,3,poly-kernel unbiased MMD^2
+gan_quality,DCGAN,FID,133.7604088365247,1.0598542671781592,3,n_generated=1600 vs n_real=1600
+gan_quality,DCGAN,KID_x1000,118.78901084264119,1.6384986713776457,3,poly-kernel unbiased MMD^2
+gan_quality,WGAN-GP,FID,160.8383543995848,1.9904118513677644,3,n_generated=1600 vs n_real=1600
+gan_quality,WGAN-GP,KID_x1000,148.9636826515198,2.592701795068158,3,poly-kernel unbiased MMD^2
+gan_quality,cWGAN-GP,FID,147.25811063679035,1.3389873442817,3,n_generated=1600 vs n_real=1600
+gan_quality,cWGAN-GP,KID_x1000,135.3124197324117,2.4574304187823395,3,poly-kernel unbiased MMD^2
+downstream_classification,real_only,test_accuracy,0.8112499999999999,0.04738885021816843,3,n_train=4480; test=archive/Testing 1600
+downstream_classification,real_only,test_macro_f1,0.8104763247736706,0.048823131220812915,3,n_train=4480; test=archive/Testing 1600
+downstream_classification,real_plus_cwgangp_synthetic,test_accuracy,0.8516666666666667,0.01677439144450055,3,n_train=10080; test=archive/Testing 1600
+downstream_classification,real_plus_cwgangp_synthetic,test_macro_f1,0.8474743533450559,0.015127032065783324,3,n_train=10080; test=archive/Testing 1600
+downstream_classification,C_real_only_matched_size,test_accuracy,0.8689583333333334,0.027281327558118074,3,"n_train=10080 (resampled real, duplicates); control for training-set size"
+downstream_classification,C_real_only_matched_size,test_macro_f1,0.8676832249509094,0.026027001268240247,3,"n_train=10080 (resampled real, duplicates); control for training-set size"
+downstream_PRELIMINARY_leaky,real_only,test_accuracy,0.8112499999999999,0.04738885021816843,3,PRELIMINARY: GAN saw the CNN validation images; do not use for conclusions
+downstream_PRELIMINARY_leaky,real_only,test_macro_f1,0.8104763247736706,0.048823131220812915,3,PRELIMINARY: GAN saw the CNN validation images; do not use for conclusions
+downstream_PRELIMINARY_leaky,real_plus_cwgangp_synthetic,test_accuracy,0.86875,0.009206824914160142,3,PRELIMINARY: GAN saw the CNN validation images; do not use for conclusions
+downstream_PRELIMINARY_leaky,real_plus_cwgangp_synthetic,test_macro_f1,0.8663411632871636,0.009577645912209725,3,PRELIMINARY: GAN saw the CNN validation images; do not use for conclusions

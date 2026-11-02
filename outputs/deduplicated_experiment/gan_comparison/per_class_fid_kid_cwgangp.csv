@@ -1,0 +1,5 @@
+class,n_generated_per_seed,n_real,fid_mean,fid_std,kid_mean,kid_std,kid_subset_size,reliability_note,own_class_is_lowest_kid_row_wise,own_label_is_lowest_kid_column_wise
+glioma,196,196,190.87044102918514,4.098857557627411,0.15722645521163942,0.004154990694081315,100,n>=100 (still small for 2048-d FID),False,True
+meningioma,122,122,213.55143490932653,1.0546246283260643,0.15491415659586588,0.0003658974693688684,97,n>=100 (still small for 2048-d FID),True,False
+notumor,46,46,242.11475842919117,3.082447209697752,0.16603256305058797,0.0020192702001204086,36,n<100: FID/KID indicative only,False,True
+pituitary,128,128,238.99574606854512,3.0040539565718563,0.2087475562095642,0.004433508856450476,100,n>=100 (still small for 2048-d FID),False,False

@@ -1,0 +1,32 @@
+{
+  "batch_size": 16,
+  "epochs": 9,
+  "max_batches": 3000,
+  "subset_size": 0,
+  "seed": 42,
+  "lr": 0.0002,
+  "sample_every": 500,
+  "checkpoint_every": 500,
+  "device": "mps",
+  "out_dir": "outputs/dcgan_3000",
+  "image_size": 64,
+  "z_dim": 100,
+  "optimizer": "Adam",
+  "betas": [
+    0.5,
+    0.999
+  ],
+  "loss": "non-saturating BCE-with-logits (real=1, fake=0)",
+  "weight_init": "N(0,0.02)",
+  "train_dir": "/Users/ajaikumarn/Desktop/brain/archive/Training",
+  "images_used": 5600,
+  "subset_class_counts": {
+    "glioma": 1400,
+    "meningioma": 1400,
+    "notumor": 1400,
+    "pituitary": 1400
+  },
+  "subset_file_list_sha256": "8bf33428b6a5e6298c0d77e2f3f586c958f41d22454a26c03dc0460a7fe93926",
+  "torch_version": "2.14.0",
+  "conditional": false
+}

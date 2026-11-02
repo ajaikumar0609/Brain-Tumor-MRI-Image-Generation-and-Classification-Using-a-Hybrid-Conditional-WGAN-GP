@@ -1,0 +1,98 @@
+{
+ "val": {
+  "n_reps": 494,
+  "n_scored": 375,
+  "refined_ge_0.99": 0,
+  "refined_ge_0.98": 0,
+  "refined_ge_0.97": 2,
+  "refined_ge_0.95": 8,
+  "max_refined": 0.974093496799469,
+  "p50": 0.9008815288543701,
+  "top6": [
+   {
+    "query": "Training/notumor/Tr-no_362.jpg",
+    "match": "Training/notumor/Tr-no_1317.jpg",
+    "coarse": 0.9474,
+    "refined": 0.9741
+   },
+   {
+    "query": "Training/notumor/Tr-no_1.jpg",
+    "match": "Training/notumor/Tr-no_1191.jpg",
+    "coarse": 0.9781,
+    "refined": 0.9716
+   },
+   {
+    "query": "Training/notumor/Tr-no_1064.jpg",
+    "match": "Training/notumor/Tr-no_1176.jpg",
+    "coarse": 0.9687,
+    "refined": 0.9602
+   },
+   {
+    "query": "Training/notumor/Tr-no_520.jpg",
+    "match": "Training/notumor/Tr-no_638.jpg",
+    "coarse": 0.9776,
+    "refined": 0.9588
+   },
+   {
+    "query": "Training/glioma/Tr-gl_150.jpg",
+    "match": "Training/glioma/Tr-gl_263.jpg",
+    "coarse": 0.9684,
+    "refined": 0.9564
+   },
+   {
+    "query": "Training/notumor/Tr-no_959.jpg",
+    "match": "Training/notumor/Tr-no_702.jpg",
+    "coarse": 0.9758,
+    "refined": 0.9556
+   }
+  ]
+ },
+ "test": {
+  "n_reps": 494,
+  "n_scored": 353,
+  "refined_ge_0.99": 0,
+  "refined_ge_0.98": 1,
+  "refined_ge_0.97": 2,
+  "refined_ge_0.95": 14,
+  "max_refined": 0.9817549586296082,
+  "p50": 0.9012053608894348,
+  "top6": [
+   {
+    "query": "Training/notumor/Tr-no_244.jpg",
+    "match": "Training/notumor/Tr-no_1307.jpg",
+    "coarse": 0.9795,
+    "refined": 0.9818
+   },
+   {
+    "query": "Training/notumor/Tr-no_1271.jpg",
+    "match": "Training/notumor/Tr-no_214.jpg",
+    "coarse": 0.9675,
+    "refined": 0.9767
+   },
+   {
+    "query": "Training/notumor/Tr-no_1130.jpg",
+    "match": "Training/notumor/Tr-no_1032.jpg",
+    "coarse": 0.9742,
+    "refined": 0.9631
+   },
+   {
+    "query": "Training/glioma/Tr-gl_987.jpg",
+    "match": "Training/meningioma/Tr-me_1245.jpg",
+    "coarse": 0.9769,
+    "refined": 0.9569
+   },
+   {
+    "query": "Training/pituitary/Tr-pi_44.jpg",
+    "match": "Training/pituitary/Tr-pi_121.jpg",
+    "coarse": 0.9737,
+    "refined": 0.9561
+   },
+   {
+    "query": "Training/pituitary/Tr-pi_550.jpg",
+    "match": "Training/pituitary/Tr-pi_663.jpg",
+    "coarse": 0.9742,
+    "refined": 0.956
+   }
+  ]
+ }
+}

@@ -1,0 +1,42 @@
+{
+  "status": "ok",
+  "device": "mps",
+  "seed": 42,
+  "image_size": 64,
+  "batch_size": 16,
+  "images_used": 2311,
+  "subset_file_list_sha256": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+  "subset_class_counts": {
+    "glioma": 918,
+    "meningioma": 566,
+    "notumor": 227,
+    "pituitary": 600
+  },
+  "n_critic": 5,
+  "lambda_gp": 10.0,
+  "critic_updates_completed": 15000,
+  "generator_updates_completed": 3000,
+  "runtime_seconds": 1759.343,
+  "seconds_per_generator_update_incl_5_critic_updates": 0.5864,
+  "avg_seconds_per_critic_update": 0.1086,
+  "avg_seconds_per_generator_phase": 0.0423,
+  "initial_critic_loss": 9.438611030578613,
+  "final_critic_loss": -2.958454132080078,
+  "initial_gen_loss": 0.48121675848960876,
+  "final_gen_loss": 10.668619155883789,
+  "initial_w_dist_estimate": 0.044229187071323395,
+  "final_w_dist_estimate": 3.293933868408203,
+  "grad_penalty": {
+    "min": 0.0047567132860422134,
+    "mean": 0.10496712937500949,
+    "max": 3.6033692359924316,
+    "last": 0.033547960221767426
+  },
+  "all_losses_and_grads_finite": true,
+  "generator_params_changed": true,
+  "critic_params_changed": true,
+  "checkpoint_loads_with_weights_only": true,
+  "checkpoint_reload_matches_samples": true,
+  "trained_on_testing_dir": false,
+  "mps_fallback_env_set": false
+}

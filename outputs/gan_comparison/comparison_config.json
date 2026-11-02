@@ -1,0 +1,64 @@
+{
+  "implementation": "torch-fidelity 0.4.0",
+  "feature_extractor": "inception-v3-compat",
+  "feature_layer": "2048 (pool3)",
+  "inception_weights": "external_models/inception_fid_weights/weights-inception-2015-12-05-6726825d.pth",
+  "inception_weights_sha256": "6726825d0af5f729cebd5821db510b11b1cfad8faad88a03f1befd49fb9129b2",
+  "feature_dtype": "float32",
+  "feature_device": "mps",
+  "resize_to_inception": "TF-compatible bilinear 64->299",
+  "image_preprocessing": "grayscale -> Resize(64,64) -> uint8 -> repeat to 3 channels (identical for real and generated)",
+  "generated_to_uint8": "clamp [-1,1] -> (x+1)/2*255 -> round",
+  "generator_mode": "eval() (BatchNorm running statistics)",
+  "real_reference": "archive/Testing, 1600 images (400/class), all used, read only by this script",
+  "generated_samples": {
+    "DCGAN": "1600 unconditional per seed",
+    "WGAN-GP": "1600 unconditional per seed",
+    "cWGAN-GP": "1600 per seed = 400 per label (glioma, meningioma, notumor, pituitary)"
+  },
+  "generation_seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "training_seed": 42,
+  "fid": "torch-fidelity fid_features_to_statistics + fid_statistics_to_metric, full 1600 vs 1600",
+  "kid": {
+    "subsets": 100,
+    "subset_size_overall": 1000,
+    "subset_size_per_class": 200,
+    "kernel": "poly(degree=3, gamma=1/d, coef0=1)",
+    "estimator": "unbiased MMD^2"
+  },
+  "uncertainty": "std across the 3 generation seeds (ddof=1) and mean within-seed KID subset std; no uncertainty for the single reference set",
+  "real_train_reference": {
+    "description": "class-balanced random 400/class draws from archive/Training vs the test set",
+    "seeds": [
+      2001,
+      2002,
+      2003
+    ]
+  },
+  "checkpoints": {
+    "DCGAN": {
+      "path": "outputs/dcgan_3000/checkpoint_step_3000.pth",
+      "generator_updates": 3000,
+      "discriminator_or_critic_updates": 3000,
+      "sha256": "ba599c53e925e6cb52cedab5405fa5acfc222364ac420635bc7c1eac00579727"
+    },
+    "WGAN-GP": {
+      "path": "outputs/wgangp_3000/checkpoint_step_3000.pth",
+      "generator_updates": 3000,
+      "discriminator_or_critic_updates": 15000,
+      "sha256": "46e513a254eecf3434456745f660942ee64618684637b176408c1729c25f3c36"
+    },
+    "cWGAN-GP": {
+      "path": "outputs/cwgangp_3000/checkpoint_step_3000.pth",
+      "generator_updates": 3000,
+      "discriminator_or_critic_updates": 15000,
+      "sha256": "69f992f310ececaba42b74860c39c841bd60885bdb8c1d00379bc7789f85f367"
+    }
+  },
+  "torch_version": "2.14.0",
+  "total_eval_seconds": 372.6
+}

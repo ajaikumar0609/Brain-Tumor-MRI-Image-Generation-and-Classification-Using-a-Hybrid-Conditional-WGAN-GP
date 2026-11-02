@@ -1,0 +1,133 @@
+{
+  "partition": "test (untouched until this run)",
+  "n_test": 492,
+  "test_file_list_sha256": "74e7a3acb77f5bc127dfa6529860546df59ce9b7c423213b0287be5c696f3ace",
+  "class_counts": [
+    196,
+    122,
+    46,
+    128
+  ],
+  "model_file": "outputs/svm_variant/model/svm_model.joblib",
+  "model_file_sha256": "5b4e2608e5d51a152f7c0a85237b32bb42430d9aacd168730b06f56046032390",
+  "model": {
+    "hog_variant": "hog128_cell8",
+    "kernel": "rbf",
+    "svc_params": {
+      "C": 10.0,
+      "class_weight": null,
+      "gamma": 0.0001234567901234568,
+      "kernel": "rbf"
+    },
+    "n_features": 8100,
+    "image_size": 128
+  },
+  "accuracy": 0.8658536585365854,
+  "balanced_accuracy": 0.8501413016204343,
+  "macro_precision": 0.8364158902331618,
+  "macro_recall": 0.8501413016204343,
+  "macro_f1": 0.8414873054409061,
+  "weighted_f1": 0.864496021836242,
+  "per_class": {
+    "glioma": {
+      "precision": 0.9166666666666666,
+      "recall": 0.8979591836734694,
+      "f1": 0.9072164948453608,
+      "support": 196,
+      "sensitivity_ovr": 0.8979591836734694,
+      "specificity_ovr": 0.9459459459459459
+    },
+    "meningioma": {
+      "precision": 0.8240740740740741,
+      "recall": 0.7295081967213115,
+      "f1": 0.7739130434782608,
+      "support": 122,
+      "sensitivity_ovr": 0.7295081967213115,
+      "specificity_ovr": 0.9486486486486486
+    },
+    "notumor": {
+      "precision": 0.7254901960784313,
+      "recall": 0.8043478260869565,
+      "f1": 0.7628865979381443,
+      "support": 46,
+      "sensitivity_ovr": 0.8043478260869565,
+      "specificity_ovr": 0.968609865470852
+    },
+    "pituitary": {
+      "precision": 0.8794326241134752,
+      "recall": 0.96875,
+      "f1": 0.9219330855018587,
+      "support": 128,
+      "sensitivity_ovr": 0.96875,
+      "specificity_ovr": 0.9532967032967034
+    }
+  },
+  "confusion_matrix": {
+    "labels": [
+      "glioma",
+      "meningioma",
+      "notumor",
+      "pituitary"
+    ],
+    "rows": "true class",
+    "cols": "predicted class",
+    "counts": [
+      [
+        176,
+        13,
+        4,
+        3
+      ],
+      [
+        12,
+        89,
+        9,
+        12
+      ],
+      [
+        3,
+        4,
+        37,
+        2
+      ],
+      [
+        1,
+        2,
+        1,
+        124
+      ]
+    ]
+  },
+  "tumour_vs_notumor": {
+    "sensitivity": 0.968609865470852,
+    "specificity": 0.8043478260869565,
+    "n_tumour": 446,
+    "n_notumor": 46
+  },
+  "bootstrap_95ci_2000_resamples_of_test_predictions": {
+    "accuracy": [
+      0.8353658536585366,
+      0.8943089430894309
+    ],
+    "macro_f1": [
+      0.8020352800138846,
+      0.8756531483762088
+    ],
+    "seed": 42
+  },
+  "majority_class_baseline_accuracy": 0.3983739837398374,
+  "runtime_seconds": {
+    "image_loading_test": 0.33,
+    "hog_extraction_test": 0.77,
+    "scaler_plus_svm_prediction_test": 4.86,
+    "per_image_total_ms": 12.1,
+    "fit_final_model": 7.69
+  },
+  "decision_score_argmax_agrees_with_predicted_label_fraction": 0.9979674796747967,
+  "checks": {
+    "saved_model_reloaded_from_disk": true,
+    "single_image_path_matches_batch_first_n": 60,
+    "test_files_disjoint_from_train_and_val": true,
+    "model_selected_before_test_was_read": true
+  }
+}

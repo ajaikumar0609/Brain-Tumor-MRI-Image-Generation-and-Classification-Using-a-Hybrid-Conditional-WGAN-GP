@@ -1,0 +1,51 @@
+{
+  "manifest_train_hash": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+  "models": {
+    "DCGAN": {
+      "generator_updates": 3000,
+      "critic_or_discriminator_updates": 3000,
+      "weights_finite": true,
+      "reload_weights_only": true,
+      "train_hash_matches_manifest": true,
+      "images_used": 2311,
+      "trained_on_testing_dir": false,
+      "all_losses_and_grads_finite": true,
+      "status": "ok",
+      "device": "mps",
+      "runtime_seconds": 293.443,
+      "resumed_from": null,
+      "pass": true
+    },
+    "WGAN-GP": {
+      "generator_updates": 3000,
+      "critic_or_discriminator_updates": 15000,
+      "weights_finite": true,
+      "reload_weights_only": true,
+      "train_hash_matches_manifest": true,
+      "images_used": 2311,
+      "trained_on_testing_dir": false,
+      "all_losses_and_grads_finite": true,
+      "status": "ok",
+      "device": "mps",
+      "runtime_seconds": 1759.343,
+      "resumed_from": null,
+      "pass": true
+    },
+    "cWGAN-GP": {
+      "generator_updates": 3000,
+      "critic_or_discriminator_updates": 15000,
+      "weights_finite": true,
+      "reload_weights_only": true,
+      "train_hash_matches_manifest": true,
+      "images_used": 2311,
+      "trained_on_testing_dir": false,
+      "all_losses_and_grads_finite": true,
+      "status": "ok",
+      "device": "mps",
+      "runtime_seconds": 2148.99,
+      "resumed_from": "/Users/ajaikumarn/Desktop/brain/outputs/deduplicated_experiment/gan/cwgangp/checkpoint_step_2500.pth",
+      "pass": true
+    }
+  },
+  "all_pass": true
+}

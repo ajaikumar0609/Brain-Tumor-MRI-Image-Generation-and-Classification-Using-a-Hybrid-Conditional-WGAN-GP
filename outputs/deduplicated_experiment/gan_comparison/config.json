@@ -1,0 +1,61 @@
+{
+  "implementation": "torch-fidelity 0.4.0 inception-v3-compat pool3",
+  "inception_weights_sha256": "6726825d0af5f729cebd5821db510b11b1cfad8faad88a03f1befd49fb9129b2",
+  "feature_device": "mps",
+  "reference": "test-partition representatives of the cluster-disjoint split",
+  "n_ref": 492,
+  "test_class_counts": [
+    196,
+    122,
+    46,
+    128
+  ],
+  "generation_seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "floor_seeds": [
+    2001,
+    2002,
+    2003
+  ],
+  "kid": {
+    "subsets": 100,
+    "subset_size_overall": 300,
+    "kernel": "poly deg 3",
+    "per_class_subset": "min(100, 0.8*min(n_gen, n_real))"
+  },
+  "manifest_sha256": "6bc6835cd1fbef966cfd8c3e5188e9a651dec1925c439d386e6d85a1aa3696d3",
+  "manifest_train_hash": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+  "checkpoints": {
+    "DCGAN": {
+      "path": "outputs/deduplicated_experiment/gan/dcgan/checkpoint_step_3000.pth",
+      "generator_updates": 3000,
+      "discriminator_or_critic_updates": 3000,
+      "train_file_list_sha256": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+      "images_used": 2311,
+      "matches_manifest_train_partition": true
+    },
+    "WGAN-GP": {
+      "path": "outputs/deduplicated_experiment/gan/wgangp/checkpoint_step_3000.pth",
+      "generator_updates": 3000,
+      "discriminator_or_critic_updates": 15000,
+      "train_file_list_sha256": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+      "images_used": 2311,
+      "matches_manifest_train_partition": true
+    },
+    "cWGAN-GP": {
+      "path": "outputs/deduplicated_experiment/gan/cwgangp/checkpoint_step_3000.pth",
+      "generator_updates": 3000,
+      "discriminator_or_critic_updates": 15000,
+      "train_file_list_sha256": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+      "images_used": 2311,
+      "matches_manifest_train_partition": true
+    }
+  },
+  "uncertainty": "std across 3 generation seeds only; one training run per GAN; single reference set",
+  "generator_mode": "eval()",
+  "smoke": false,
+  "eval_seconds": 127.7
+}

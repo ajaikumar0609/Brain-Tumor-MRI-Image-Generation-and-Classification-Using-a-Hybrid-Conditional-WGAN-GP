@@ -1,0 +1,20 @@
+{
+  "DCGAN (32 G / 32 D updates)": {
+    "mean_pixel_std_across_samples": 0.0637,
+    "mean_pairwise_l2": 5.989,
+    "pixel_min": -0.751,
+    "pixel_max": 0.45
+  },
+  "WGAN-GP (32 G / 160 critic updates)": {
+    "mean_pixel_std_across_samples": 0.0577,
+    "mean_pairwise_l2": 5.407,
+    "pixel_min": -0.917,
+    "pixel_max": 0.445
+  },
+  "real (training images, reference)": {
+    "mean_pixel_std_across_samples": 0.2494,
+    "mean_pairwise_l2": 23.153,
+    "pixel_min": -1.0,
+    "pixel_max": 0.984
+  }
+}

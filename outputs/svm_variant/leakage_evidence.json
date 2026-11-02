@@ -1,0 +1,42 @@
+{
+  "clusters_spanning_more_than_one_partition": 0,
+  "n_clusters_checked": 3297,
+  "train_val_test_file_lists_disjoint": true,
+  "byte_identical_files_shared_between_partitions": {
+    "train-val": 0,
+    "train-test": 0,
+    "val-test": 0
+  },
+  "max_similarity_of_val_and_test_images_to_train_images": {
+    "val": {
+      "max_similarity_to_any_train_image": 0.9796289409743139,
+      "mean_of_per_image_max": 0.917583260787522,
+      "median": 0.9437566873394923,
+      "n_ge_0.98": 0,
+      "n_ge_0.97": 55,
+      "n_ge_0.95": 211,
+      "n": 492
+    },
+    "test": {
+      "max_similarity_to_any_train_image": 0.9798019277054617,
+      "mean_of_per_image_max": 0.9099892481114447,
+      "median": 0.9371021045589497,
+      "n_ge_0.98": 0,
+      "n_ge_0.97": 62,
+      "n_ge_0.95": 188,
+      "n": 492
+    }
+  },
+  "linking_threshold": 0.98,
+  "run_order": {
+    "model_written_before_test_evaluation": true,
+    "selection_script_partitions": [
+      "train",
+      "val"
+    ],
+    "test_evaluation_script_refuses_second_run": true,
+    "scaler_fitted_inside_pipeline_on_training_data_only": true,
+    "cross_validation_on_training_partition_only": true
+  },
+  "caveat": "No patient identifiers exist, so different slices of the same patient cannot be detected; patient-level independence is NOT proven."
+}

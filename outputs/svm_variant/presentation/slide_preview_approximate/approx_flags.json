@@ -1,0 +1,141 @@
+[
+  {
+    "slide": 1,
+    "title": "Title slide",
+    "elements": {
+      "AUTO_SHAPE": 2,
+      "TEXT_BOX": 4
+    },
+    "flags": []
+  },
+  {
+    "slide": 2,
+    "title": "Problem statement and motivation",
+    "elements": {
+      "AUTO_SHAPE": 4,
+      "TEXT_BOX": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 3,
+    "title": "Aim and objectives",
+    "elements": {
+      "AUTO_SHAPE": 5,
+      "TEXT_BOX": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 4,
+    "title": "Literature review and research gap",
+    "elements": {
+      "AUTO_SHAPE": 3,
+      "TABLE": 1,
+      "TEXT_BOX": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 5,
+    "title": "Dataset and class distribution",
+    "elements": {
+      "AUTO_SHAPE": 3,
+      "TABLE": 1,
+      "PICTURE": 1,
+      "TEXT_BOX": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 6,
+    "title": "Preprocessing and HOG features",
+    "elements": {
+      "AUTO_SHAPE": 2,
+      "TABLE": 1,
+      "PICTURE": 1,
+      "TEXT_BOX": 4
+    },
+    "flags": []
+  },
+  {
+    "slide": 7,
+    "title": "Linear SVM and RBF SVM",
+    "elements": {
+      "AUTO_SHAPE": 4,
+      "TABLE": 1,
+      "TEXT_BOX": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 8,
+    "title": "System architecture and implementation",
+    "elements": {
+      "AUTO_SHAPE": 2,
+      "PICTURE": 2,
+      "TEXT_BOX": 4
+    },
+    "flags": []
+  },
+  {
+    "slide": 9,
+    "title": "Hyperparameter selection and evaluation design",
+    "elements": {
+      "AUTO_SHAPE": 4,
+      "PICTURE": 1,
+      "TEXT_BOX": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 10,
+    "title": "Actual SVM results and comparison",
+    "elements": {
+      "AUTO_SHAPE": 3,
+      "TABLE": 2,
+      "PICTURE": 1,
+      "TEXT_BOX": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 11,
+    "title": "Confusion matrix and class-wise analysis",
+    "elements": {
+      "AUTO_SHAPE": 2,
+      "TABLE": 1,
+      "PICTURE": 1,
+      "TEXT_BOX": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 12,
+    "title": "Healthcare ethics, safety and limitations",
+    "elements": {
+      "AUTO_SHAPE": 3,
+      "PICTURE": 1,
+      "TEXT_BOX": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 13,
+    "title": "Conclusion and future scope",
+    "elements": {
+      "AUTO_SHAPE": 4,
+      "TEXT_BOX": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 14,
+    "title": "References and questions",
+    "elements": {
+      "AUTO_SHAPE": 3,
+      "TEXT_BOX": 5
+    },
+    "flags": []
+  }
+]

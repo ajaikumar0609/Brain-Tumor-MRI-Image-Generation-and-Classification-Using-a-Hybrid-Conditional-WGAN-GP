@@ -1,0 +1,89 @@
+{
+  "method": "Read-only near-duplicate audit (numpy + PIL): are Testing / CNN-validation images near-copies (incl. flips/rotations) of training images?",
+  "n_train": 5600,
+  "n_test": 1600,
+  "testing_vs_training": {
+    "all": {
+      ">=0.999": 1076,
+      ">=0.99": 1087,
+      ">=0.98": 1146,
+      ">=0.95": 1327,
+      ">=0.9": 1478
+    },
+    "n": 1600,
+    "te_aug_images": {
+      "n": 103,
+      ">=0.999": 0,
+      ">=0.99": 5,
+      ">=0.98": 13,
+      ">=0.95": 48,
+      ">=0.9": 91,
+      "median_best_sim": 0.9482170343399048
+    },
+    "non_aug_images": {
+      "n": 1497,
+      ">=0.999": 1076,
+      ">=0.99": 1082,
+      ">=0.98": 1133,
+      ">=0.95": 1279,
+      ">=0.9": 1387,
+      "median_best_sim": 0.9999033212661743
+    },
+    "orientation_of_best_match_for_hits_ge_0.98": {
+      "0": 182,
+      "1": 775,
+      "2": 119,
+      "3": 0,
+      "4": 70,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    }
+  },
+  "training_vs_other_training": {
+    "all": {
+      ">=0.999": 3517,
+      ">=0.99": 3614,
+      ">=0.98": 3812,
+      ">=0.95": 4658,
+      ">=0.9": 5205
+    },
+    "tr_aug_images": {
+      "n": 100,
+      ">=0.999": 12,
+      ">=0.99": 13,
+      ">=0.98": 16,
+      ">=0.95": 52,
+      ">=0.9": 86
+    },
+    "non_aug": {
+      ">=0.999": 3505,
+      ">=0.99": 3601,
+      ">=0.98": 3796,
+      ">=0.95": 4606,
+      ">=0.9": 5119
+    },
+    "percentiles_best_sim_p50_p90_p99": [
+      0.9998825192451477,
+      0.9999783039093018,
+      1.0000008344650269
+    ]
+  },
+  "cnn_validation_vs_cnn_train": {
+    "n_val": 1120,
+    ">=0.999": 627,
+    ">=0.99": 644,
+    ">=0.98": 689,
+    ">=0.95": 877,
+    ">=0.9": 1010,
+    "val_aug_images": {
+      "n": 24,
+      ">=0.999": 3,
+      ">=0.99": 3,
+      ">=0.98": 5,
+      ">=0.95": 12,
+      ">=0.9": 21
+    }
+  },
+  "note": "similarity 1.0 = identical up to resize; flips/rotations are included so augmented copies are detectable; this is a heuristic, not proof."
+}

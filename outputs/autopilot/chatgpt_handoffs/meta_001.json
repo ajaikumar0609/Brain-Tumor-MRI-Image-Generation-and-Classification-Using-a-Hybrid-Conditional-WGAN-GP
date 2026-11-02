@@ -1,0 +1,15 @@
+{
+  "handoff_id": 1,
+  "conversation": "chatgpt.com/c/6ac52219-ea48-83ec-a5c5-4d16eb434480 (title: GAN Healthcare Project Comparison)",
+  "message_sent_approx": "2026-10-12T01:46",
+  "response_read_approx": "2026-10-12T01:48",
+  "project_stage_at_send": "clean cWGAN-GP verified; downstream rerun (stage C) starting",
+  "generation_complete": true,
+  "generation_complete_evidence": "send button restored, END_CLAUDE_NEXT_TASK marker is the last text of the reply",
+  "marker_pairs_found_in_reply": 1,
+  "raw_sha256": "00cca75bca52d815287c8d7eb97cea4d9c447e6d3297b8b6521977dba9ef89b1",
+  "task_chars": 6714,
+  "note": "table in section 5 was flattened by page-text extraction; a clarifying note was added in the raw file; reply otherwise verbatim",
+  "status": "VALIDATED and EXECUTED (matched-size control run 11:23-11:28, verified)",
+  "executed_as": "src/downstream_matched_control.py -> outputs/downstream_classification_matched/"
+}

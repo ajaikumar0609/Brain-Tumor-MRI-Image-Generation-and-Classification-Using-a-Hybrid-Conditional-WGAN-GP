@@ -1,0 +1,35 @@
+{
+  "batch_size": 16,
+  "gen_steps": 3000,
+  "n_critic": 5,
+  "lambda_gp": 10.0,
+  "subset_size": 0,
+  "seed": 42,
+  "lr": 0.0001,
+  "sample_every": 500,
+  "checkpoint_every": 500,
+  "manifest": "/Users/ajaikumarn/Desktop/brain/outputs/deduplicated_experiment/split_manifest.csv",
+  "device": "mps",
+  "out_dir": "/Users/ajaikumarn/Desktop/brain/outputs/deduplicated_experiment/gan/wgangp",
+  "image_size": 64,
+  "z_dim": 100,
+  "optimizer": "Adam",
+  "betas": [
+    0.5,
+    0.9
+  ],
+  "loss": "WGAN-GP: L_D = E[D(fake)] - E[D(real)] + lambda*GP ; L_G = -E[D(fake)]",
+  "critic_batchnorm": false,
+  "weight_init": "N(0,0.02)",
+  "train_dir": "/Users/ajaikumarn/Desktop/brain/archive/Training",
+  "images_used": 2311,
+  "subset_class_counts": {
+    "glioma": 918,
+    "meningioma": 566,
+    "notumor": 227,
+    "pituitary": 600
+  },
+  "subset_file_list_sha256": "f4ae5d83a7b55c88d89b37a67d969059bdf4071bb9ee89a588f5b94547a980d0",
+  "torch_version": "2.14.0",
+  "conditional": false
+}

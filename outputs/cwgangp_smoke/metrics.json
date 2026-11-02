@@ -1,0 +1,81 @@
+{
+  "status": "ok",
+  "device": "mps",
+  "seed": 42,
+  "image_size": 64,
+  "batch_size": 16,
+  "images_used": 512,
+  "subset_file_list_sha256": "02b1dd2c3452508ea8379c629fb930de1492be6c1abead0ae928bdfeb94a1427",
+  "subset_hash_matches_dcgan_wgangp_smoke": true,
+  "subset_class_counts": {
+    "glioma": 131,
+    "meningioma": 130,
+    "notumor": 120,
+    "pituitary": 131
+  },
+  "n_critic": 5,
+  "lambda_gp": 10.0,
+  "critic_updates_completed": 160,
+  "generator_updates_completed": 32,
+  "runtime_seconds": 12.356,
+  "seconds_per_generator_update_incl_5_critic_updates": 0.3861,
+  "avg_seconds_per_critic_update": 0.0705,
+  "avg_seconds_per_generator_phase": 0.0332,
+  "initial_critic_loss": 9.29206371307373,
+  "final_critic_loss": -39.34498596191406,
+  "initial_gen_loss": 1.0236026048660278,
+  "final_gen_loss": 116.73300170898438,
+  "initial_w_dist_estimate": 0.033517830073833466,
+  "final_w_dist_estimate": 52.569122314453125,
+  "grad_penalty": {
+    "min": 0.02759324386715889,
+    "mean": 2.059438467375003,
+    "max": 6.327688217163086,
+    "last": 1.322413444519043
+  },
+  "all_losses_and_grads_finite": true,
+  "generator_params_changed": true,
+  "critic_params_changed": true,
+  "checkpoint_loads_with_weights_only": true,
+  "reloaded_checkpoint_reproduces_samples_same_device_atol_1e-6": true,
+  "reloaded_on_cpu_max_abs_diff_vs_mps_samples": 6.258487701416016e-07,
+  "conditioning_before_training": {
+    "mean_abs_pixel_diff_same_z_different_label": {
+      "glioma_vs_meningioma": 5e-05,
+      "glioma_vs_notumor": 6e-05,
+      "glioma_vs_pituitary": 5e-05,
+      "meningioma_vs_notumor": 5e-05,
+      "meningioma_vs_pituitary": 5e-05,
+      "notumor_vs_pituitary": 5e-05
+    },
+    "mean_label_effect": 5e-05,
+    "mean_abs_pixel_diff_same_label_different_z": 0.00201,
+    "class_mean_pixel_value": {
+      "glioma": -0.00023,
+      "meningioma": -0.00023,
+      "notumor": -0.00023,
+      "pituitary": -0.00023
+    }
+  },
+  "conditioning_after_training": {
+    "mean_abs_pixel_diff_same_z_different_label": {
+      "glioma_vs_meningioma": 0.00157,
+      "glioma_vs_notumor": 0.00182,
+      "glioma_vs_pituitary": 0.00166,
+      "meningioma_vs_notumor": 0.00166,
+      "meningioma_vs_pituitary": 0.00141,
+      "notumor_vs_pituitary": 0.00157
+    },
+    "mean_label_effect": 0.00162,
+    "mean_abs_pixel_diff_same_label_different_z": 0.07,
+    "class_mean_pixel_value": {
+      "glioma": -0.32569,
+      "meningioma": -0.32552,
+      "notumor": -0.32533,
+      "pituitary": -0.32537
+    }
+  },
+  "trained_on_testing_dir": false,
+  "mps_fallback_env_set": false,
+  "classifier_guidance": false
+}

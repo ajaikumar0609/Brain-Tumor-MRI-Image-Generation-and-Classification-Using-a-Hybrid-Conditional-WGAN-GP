@@ -1,0 +1,24 @@
+== real_only (mean over 3 seeds; n_train=4480) ==
+accuracy 0.8112  macro-F1 0.8105  weighted-F1 0.8105
+  glioma      P 0.9207  R 0.6650  F1 0.7722
+  meningioma  P 0.7125  R 0.8242  F1 0.7446
+  notumor     P 0.8945  R 0.9100  F1 0.9010
+  pituitary   P 0.8507  R 0.8458  F1 0.8242
+  mean confusion matrix (rows true, cols pred):
+     266.0    79.7    26.0    28.3
+      10.7   329.7    16.0    43.7
+       6.7     9.7   364.0    19.7
+       5.7    55.7     0.3   338.3
+
+== real_plus_cwgangp_synthetic (mean over 3 seeds; n_train=10080) ==
+accuracy 0.8517  macro-F1 0.8475  weighted-F1 0.8475
+  glioma      P 0.9308  R 0.6275  F1 0.7487
+  meningioma  P 0.7344  R 0.8717  F1 0.7968
+  notumor     P 0.8579  R 0.9833  F1 0.9162
+  pituitary   P 0.9352  R 0.9242  F1 0.9281
+  mean confusion matrix (rows true, cols pred):
+     251.0    96.7    41.0    11.3
+      12.3   348.7    24.0    15.0
+       2.7     4.0   393.3     0.0
+       4.3    25.7     0.3   369.7
+

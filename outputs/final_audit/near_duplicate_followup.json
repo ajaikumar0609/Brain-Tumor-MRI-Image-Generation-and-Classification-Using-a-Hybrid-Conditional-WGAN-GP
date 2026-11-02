@@ -1,0 +1,49 @@
+{
+  "similarity_histogram": {
+    "[-1,0.9)": 122,
+    "[0.9,0.95)": 151,
+    "[0.95,0.98)": 181,
+    "[0.98,0.99)": 59,
+    "[0.99,0.999)": 11,
+    "[0.999,1.01)": 1076
+  },
+  "label_agreement_ge_0.999": {
+    "n": 1076,
+    "same_label": 1074
+  },
+  "fullres_check_250_hits": {
+    "min": 0.9904177784919739,
+    "p5": 0.9995237916707993,
+    "median": 0.9998856484889984,
+    "share_ge_0.99": 1.0
+  },
+  "condition_C_accuracy_by_neighbour_status": {
+    "near-copy in Training (sim>=0.99)": {
+      "n": 1087,
+      "acc_per_seed": [
+        0.9476,
+        0.9338,
+        0.8942
+      ],
+      "mean": 0.9252
+    },
+    "no near-copy (sim<0.99)": {
+      "n": 513,
+      "acc_per_seed": [
+        0.7778,
+        0.7485,
+        0.7232
+      ],
+      "mean": 0.7498
+    },
+    "clearly different (sim<0.95)": {
+      "n": 273,
+      "acc_per_seed": [
+        0.641,
+        0.6154,
+        0.5971
+      ],
+      "mean": 0.6178
+    }
+  }
+}

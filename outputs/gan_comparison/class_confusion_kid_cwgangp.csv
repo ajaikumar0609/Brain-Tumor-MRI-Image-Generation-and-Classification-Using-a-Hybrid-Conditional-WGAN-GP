@@ -1,0 +1,5 @@
+generated_label \ real_test_class,glioma,meningioma,notumor,pituitary
+glioma,0.149831,0.145818,0.202717,0.201187
+meningioma,0.156714,0.147720,0.218045,0.199209
+notumor,0.156615,0.147023,0.153895,0.199440
+pituitary,0.175135,0.161616,0.245055,0.183679

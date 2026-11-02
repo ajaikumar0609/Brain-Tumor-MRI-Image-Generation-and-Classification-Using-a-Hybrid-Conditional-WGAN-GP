@@ -1,0 +1,41 @@
+{
+  "poll_seconds": 15,
+  "poll_max_seconds": 60,
+  "max_claude_calls": 14,
+  "claude_max_turns": 10,
+  "claude_max_budget_usd_per_call": 1.5,
+  "claude_timeout_seconds": 1200,
+  "claude_bin": "claude",
+  "claude_model": null,
+  "decision_with_claude": true,
+  "max_repairs_per_stage": 2,
+  "stage_timeouts_seconds": {
+    "A": 7200,
+    "B": 1800,
+    "C": 5400,
+    "D": 3600
+  },
+  "max_total_training_seconds": 5400,
+  "python_bin": null,
+  "min_free_disk_gb": 5,
+  "verify_checkpoint_counters": true,
+  "downstream_seeds": [
+    42,
+    43,
+    44
+  ],
+  "downstream_epochs": 15,
+  "downstream_synthetic_per_class": 1400,
+  "downstream_dir": "outputs/downstream_classification_clean",
+  "downstream_preliminary_dir": "outputs/downstream_classification",
+  "downstream_gan_ckpt": "outputs/cwgangp_clean_3000/checkpoint_step_3000.pth",
+  "require_leakage_free_downstream": true,
+  "downstream_matched_dir": "outputs/downstream_classification_matched",
+  "report_notes": [
+    "NON-FINITE-LOSS INCIDENT (cause unconfirmed): during the first run of the clean downstream experiment (01:45-01:50, 2026-10-12) the real+synthetic run for seed 44 raised a non-finite-loss error immediately after the log recorded Apple Metal 'command buffer exited with error status / Internal Error' on the M4 GPU, and the Mac restarted around then. Sleep/restart is only a hypothesis; the root cause was not established. The partial results were archived (outputs/downstream_classification_clean.prev-*), and the experiment was rerun from scratch with identical code, data and seeds: all 6 runs finished with finite losses and every comparable run (real-only seeds 42-44, real+synthetic seeds 42-43) reproduced the earlier numbers exactly.",
+    "CONTENT-LEVEL DUPLICATES: the file-level leakage audit reports zero overlap between the GAN training files and the CNN validation files, but a SHA-256 byte-identity check found 44 of the 1,120 CNN-validation images (3.9%) have an exact copy in the CNN-training partition (the Kaggle Training folder contains duplicate images; 39 of them are among the 3,998 distinct images in the matched-size control's training set). Validation accuracy, which is used only for best-epoch selection, is therefore slightly optimistic for all three conditions, and the clean GAN also saw copies of those images. The same check found 0 byte-identical images between archive/Training and archive/Testing, so the test accuracies are not affected by this; near-duplicates were not checked and the effect on epoch selection was not quantified.",
+    "VALIDATION VS TEST: every headline classification accuracy is TEST accuracy on archive/Testing (n=1,600) of the validation-selected epoch; validation accuracy (real-only, n=1,120) was used only to choose the best epoch and is reported separately. archive/Testing was also used earlier in the project as the FID/KID reference and for a pretrained-classifier sanity check, so it is not untouched across the whole project; no GAN training or selection step used it.",
+    "MATCHED-SIZE CONTROL ORIGIN: Condition C (real-only resampled with replacement to 10,080 examples, 2,520 per class, 3,998 of the 4,480 distinct real images actually drawn) was recommended by an external reviewer model (ChatGPT) through an automated handoff and validated against the project rules by Claude before it was run. In the saved results C scored at least as high as B (real + synthetic) in all three seeds, so the improvement of B over A is explained by training-set size and optimizer steps; the experiment gives no evidence that the synthetic images add benefit beyond that.",
+    "PROCESS: the first complete autopilot pass (stages A-D) ran before the validation-leakage issue was noticed; its downstream results and documents are preserved as preliminary (outputs/downstream_classification/ and *.prev-* versions of the report files). The overnight automation chain was terminated by a Mac restart; resumption and final verification were done manually, and outputs/autopilot/OVERNIGHT_RESULT.md was written from verified files."
+  ]
+}

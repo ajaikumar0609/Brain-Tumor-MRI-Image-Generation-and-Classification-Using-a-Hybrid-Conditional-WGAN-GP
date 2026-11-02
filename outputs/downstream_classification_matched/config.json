@@ -1,0 +1,33 @@
+{
+  "condition": "real_only_matched_size",
+  "description": "real-only, resampled with replacement to the size of the real+synthetic condition",
+  "resample_seed": 5001,
+  "split_seed": 42,
+  "run_seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 15,
+  "device": "mps",
+  "smoke": false,
+  "manifest_stats": {
+    "n_examples": 10080,
+    "per_class": 2520,
+    "unique_files_used": 3998,
+    "unique_files_available": 4480,
+    "unique_used_per_class": {
+      "glioma": 1007,
+      "meningioma": 986,
+      "notumor": 1006,
+      "pituitary": 999
+    },
+    "max_multiplicity": 9,
+    "unused_files": 482
+  },
+  "manifest_sha256": "eefda04774fcaab802a41a63cb1d97af7564f461bd52fd2200416509dbdc1be8",
+  "clean_experiment_dir": "/Users/ajaikumarn/Desktop/brain/outputs/downstream_classification_clean",
+  "same_as_clean": "CNN, preprocessing, Adam 1e-3, batch 64, no augmentation, real-only validation",
+  "test_set_role": "final evaluation of validation-selected weights only (also used earlier in the project as the FID/KID reference and for a pretrained-classifier sanity check, but never to train any GAN or to select anything in this experiment)",
+  "torch_version": "2.14.0"
+}

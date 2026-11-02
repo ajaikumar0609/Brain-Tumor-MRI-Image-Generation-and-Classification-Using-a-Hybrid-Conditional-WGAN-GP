@@ -1,0 +1,48 @@
+{
+  "batch_size": 16,
+  "gen_steps": 3000,
+  "n_critic": 5,
+  "lambda_gp": 10.0,
+  "subset_size": 0,
+  "seed": 42,
+  "lr": 0.0001,
+  "sample_every": 500,
+  "checkpoint_every": 500,
+  "resume": null,
+  "train_list": "outputs/cwgangp_clean_split/cnn_train_files.json",
+  "device": "mps",
+  "out_dir": "outputs/cwgangp_clean_3000",
+  "image_size": 64,
+  "z_dim": 100,
+  "emb_dim": 50,
+  "num_classes": 4,
+  "class_to_idx": {
+    "glioma": 0,
+    "meningioma": 1,
+    "notumor": 2,
+    "pituitary": 3
+  },
+  "optimizer": "Adam",
+  "betas": [
+    0.5,
+    0.9
+  ],
+  "loss": "cWGAN-GP: L_D = E[D(G(z,y),y)] - E[D(x,y)] + lambda*GP(y fixed); L_G = -E[D(G(z,y),y)]",
+  "generator_conditioning": "embedding(50) concatenated with z",
+  "critic_conditioning": "projection (no BatchNorm)",
+  "train_dir": "/Users/ajaikumarn/Desktop/brain/archive/Training",
+  "images_used": 4480,
+  "subset_class_counts": {
+    "glioma": 1120,
+    "meningioma": 1120,
+    "notumor": 1120,
+    "pituitary": 1120
+  },
+  "subset_file_list_sha256": "8941ec4610fb1aad06ea5e18ca22a16bf7a77ec1e87d137fa0fb3cb75bd1e84a",
+  "subset_hash_matches_dcgan_wgangp_smoke": null,
+  "batches_per_epoch": 280,
+  "train_list_sha256": "26f8ca0646027c73f159cf3989e56e5a717551b5695ab3a73fd7a5c402ccb21e",
+  "torch_version": "2.14.0",
+  "classifier_guidance": false,
+  "testing_dir_used": false
+}

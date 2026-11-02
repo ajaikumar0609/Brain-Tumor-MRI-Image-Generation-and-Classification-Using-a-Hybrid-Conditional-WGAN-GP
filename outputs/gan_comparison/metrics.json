@@ -1,0 +1,134 @@
+{
+  "aggregate": {
+    "Real train (class-balanced, reference)": {
+      "fid_mean": 14.128638939111775,
+      "fid_std_across_seeds": 0.111506348100809,
+      "kid_mean": 0.0007029581069946289,
+      "kid_std_across_seeds": 0.00022333656846628918,
+      "kid_mean_within_seed_subset_std": 0.00021970208289799338,
+      "n_seeds": 3,
+      "n_generated_per_seed": 1600,
+      "n_real": 1600
+    },
+    "DCGAN": {
+      "fid_mean": 133.7604088365247,
+      "fid_std_across_seeds": 1.0598542671781592,
+      "kid_mean": 0.1187890108426412,
+      "kid_std_across_seeds": 0.0016384986713776457,
+      "kid_mean_within_seed_subset_std": 0.0012085168006584336,
+      "n_seeds": 3,
+      "n_generated_per_seed": 1600,
+      "n_real": 1600
+    },
+    "WGAN-GP": {
+      "fid_mean": 160.8383543995848,
+      "fid_std_across_seeds": 1.9904118513677644,
+      "kid_mean": 0.1489636826515198,
+      "kid_std_across_seeds": 0.002592701795068158,
+      "kid_mean_within_seed_subset_std": 0.0015358289470624245,
+      "n_seeds": 3,
+      "n_generated_per_seed": 1600,
+      "n_real": 1600
+    },
+    "cWGAN-GP": {
+      "fid_mean": 147.25811063679035,
+      "fid_std_across_seeds": 1.3389873442817,
+      "kid_mean": 0.1353124197324117,
+      "kid_std_across_seeds": 0.0024574304187823396,
+      "kid_mean_within_seed_subset_std": 0.0012986386767779746,
+      "n_seeds": 3,
+      "n_generated_per_seed": 1600,
+      "n_real": 1600
+    }
+  },
+  "per_class_cwgangp": [
+    {
+      "class": "glioma",
+      "n_generated_per_seed": 400,
+      "n_real": 400,
+      "n_seeds": 3,
+      "fid_mean": 171.11905965970072,
+      "fid_std_across_seeds": 1.5048601844363392,
+      "kid_mean": 0.14983073472976685,
+      "kid_std_across_seeds": 0.0007432679682318244,
+      "kid_subset_size": 200,
+      "kid_to_own_real_class_is_lowest_of_4": false
+    },
+    {
+      "class": "meningioma",
+      "n_generated_per_seed": 400,
+      "n_real": 400,
+      "n_seeds": 3,
+      "fid_mean": 176.70966313384142,
+      "fid_std_across_seeds": 3.6327236045355447,
+      "kid_mean": 0.14837612549463908,
+      "kid_std_across_seeds": 0.0033159665106903178,
+      "kid_subset_size": 200,
+      "kid_to_own_real_class_is_lowest_of_4": true
+    },
+    {
+      "class": "notumor",
+      "n_generated_per_seed": 400,
+      "n_real": 400,
+      "n_seeds": 3,
+      "fid_mean": 170.47529808982313,
+      "fid_std_across_seeds": 2.568531401707003,
+      "kid_mean": 0.15396767775217693,
+      "kid_std_across_seeds": 0.004216260792289788,
+      "kid_subset_size": 200,
+      "kid_to_own_real_class_is_lowest_of_4": false
+    },
+    {
+      "class": "pituitary",
+      "n_generated_per_seed": 400,
+      "n_real": 400,
+      "n_seeds": 3,
+      "fid_mean": 198.32590289048713,
+      "fid_std_across_seeds": 2.2277457264446245,
+      "kid_mean": 0.1835712520281474,
+      "kid_std_across_seeds": 0.0062429586456566695,
+      "kid_subset_size": 200,
+      "kid_to_own_real_class_is_lowest_of_4": false
+    }
+  ],
+  "class_confusion_kid_cwgangp": {
+    "rows": [
+      "glioma",
+      "meningioma",
+      "notumor",
+      "pituitary"
+    ],
+    "cols": [
+      "glioma",
+      "meningioma",
+      "notumor",
+      "pituitary"
+    ],
+    "kid": [
+      [
+        0.14983073472976685,
+        0.14581846475601196,
+        0.20271701574325562,
+        0.20118687152862547
+      ],
+      [
+        0.15671408891677857,
+        0.1477196462949117,
+        0.21804457187652587,
+        0.19920873324076338
+      ],
+      [
+        0.156615309715271,
+        0.14702333211898805,
+        0.15389543930689492,
+        0.19944025039672852
+      ],
+      [
+        0.17513512452443442,
+        0.16161626736323037,
+        0.2450551994641622,
+        0.18367927153905234
+      ]
+    ]
+  }
+}

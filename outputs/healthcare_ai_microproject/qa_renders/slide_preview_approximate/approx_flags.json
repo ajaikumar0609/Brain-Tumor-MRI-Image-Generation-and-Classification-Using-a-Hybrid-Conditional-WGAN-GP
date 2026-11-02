@@ -1,0 +1,142 @@
+[
+  {
+    "slide": 1,
+    "title": "Title slide",
+    "elements": {
+      "TEXT_BOX": 4,
+      "AUTO_SHAPE": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 2,
+    "title": "Healthcare problem and motivation",
+    "elements": {
+      "TEXT_BOX": 3,
+      "AUTO_SHAPE": 4
+    },
+    "flags": []
+  },
+  {
+    "slide": 3,
+    "title": "Aim, objectives and industry relevance",
+    "elements": {
+      "TEXT_BOX": 3,
+      "AUTO_SHAPE": 5
+    },
+    "flags": []
+  },
+  {
+    "slide": 4,
+    "title": "Literature review and research gap",
+    "elements": {
+      "TEXT_BOX": 2,
+      "AUTO_SHAPE": 3,
+      "TABLE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 5,
+    "title": "Dataset, de-duplication and final split",
+    "elements": {
+      "TEXT_BOX": 4,
+      "PICTURE": 1,
+      "AUTO_SHAPE": 3,
+      "TABLE": 1
+    },
+    "flags": [
+      "table grows from 1.68 to 1.75 in (tables grow downward)"
+    ]
+  },
+  {
+    "slide": 6,
+    "title": "Proposed methodology and experiment pipeline",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "AUTO_SHAPE": 2
+    },
+    "flags": []
+  },
+  {
+    "slide": 7,
+    "title": "DCGAN vs WGAN-GP vs conditional WGAN-GP",
+    "elements": {
+      "TEXT_BOX": 2,
+      "AUTO_SHAPE": 3,
+      "TABLE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 8,
+    "title": "NeuroVision AI: architecture and interface",
+    "elements": {
+      "TEXT_BOX": 5,
+      "PICTURE": 3,
+      "AUTO_SHAPE": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 9,
+    "title": "Generated samples and conditioning findings",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 2,
+      "AUTO_SHAPE": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 10,
+    "title": "FID / KID comparison (lower is better)",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "AUTO_SHAPE": 3,
+      "TABLE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 11,
+    "title": "Downstream classification: conditions A, B and C",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "AUTO_SHAPE": 3,
+      "TABLE": 1
+    },
+    "flags": []
+  },
+  {
+    "slide": 12,
+    "title": "Class-wise findings, ethics and patient-safety limits",
+    "elements": {
+      "TEXT_BOX": 3,
+      "PICTURE": 1,
+      "AUTO_SHAPE": 3
+    },
+    "flags": []
+  },
+  {
+    "slide": 13,
+    "title": "Conclusion and future scope",
+    "elements": {
+      "TEXT_BOX": 2,
+      "AUTO_SHAPE": 4
+    },
+    "flags": []
+  },
+  {
+    "slide": 14,
+    "title": "References and questions",
+    "elements": {
+      "TEXT_BOX": 5,
+      "AUTO_SHAPE": 3
+    },
+    "flags": []
+  }
+]

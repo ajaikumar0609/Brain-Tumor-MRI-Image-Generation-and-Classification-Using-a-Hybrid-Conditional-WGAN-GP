@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "created": "2026-10-12T01:06:54",
+  "status": "finished",
+  "current_stage": null,
+  "controller_pid": null,
+  "stages": {
+    "A": {
+      "name": "FID/KID evaluation",
+      "status": "done",
+      "attempts": 1,
+      "repairs": 0,
+      "started": "2026-10-12T01:06:54",
+      "ended": "2026-10-12T01:06:56",
+      "evidence": {
+        "fid": {
+          "Real train (class-balanced, reference)": 14.13,
+          "DCGAN": 133.76,
+          "WGAN-GP": 160.84,
+          "cWGAN-GP": 147.26
+        },
+        "kid_x1000": {
+          "Real train (class-balanced, reference)": 0.7,
+          "DCGAN": 118.79,
+          "WGAN-GP": 148.96,
+          "cWGAN-GP": 135.31
+        },
+        "feature_extractor": "inception-v3-compat",
+        "implementation": "torch-fidelity 0.4.0",
+        "exit_status_line": true
+      },
+      "artifacts": [
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/fid_kid_results.csv",
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/metrics.json",
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/comparison_config.json",
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/fid_kid_bar_chart.png",
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/sample_grids_real_vs_generated.png",
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/per_class_fid_kid_cwgangp.csv",
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/class_confusion_kid_cwgangp.csv"
+      ],
+      "error": null,
+      "child_pid": null,
+      "duration_seconds": 1.7
+    },
+    "B": {
+      "name": "Results analysis",
+      "status": "done",
+      "attempts": 1,
+      "repairs": 0,
+      "started": "2026-10-12T01:07:04",
+      "ended": "2026-10-12T01:07:37",
+      "evidence": {
+        "best_fid": "DCGAN",
+        "best_kid": "DCGAN",
+        "chars": 9893
+      },
+      "artifacts": [
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/analysis.md"
+      ],
+      "error": null,
+      "child_pid": null,
+      "duration_seconds": 32.7
+    },
+    "C": {
+      "name": "Downstream classification",
+      "status": "done",
+      "attempts": 3,
+      "repairs": 0,
+      "started": "2026-10-12T01:07:43",
+      "ended": "2026-10-12T11:28:51",
+      "evidence": {
+        "real_only": {
+          "acc_mean": 0.8112,
+          "acc_std": 0.04738885021816843,
+          "macro_f1_mean": 0.8105,
+          "n_train": 4480
+        },
+        "real_plus_cwgangp_synthetic": {
+          "acc_mean": 0.8517,
+          "acc_std": 0.01677439144450055,
+          "macro_f1_mean": 0.8475,
+          "n_train": 10080
+        },
+        "paired_accuracy_difference_synthetic_minus_real_only": {
+          "per_seed": [
+            0.11375000000000002,
+            0.012499999999999956,
+            -0.0050000000000000044
+          ],
+          "mean": 0.040416666666666656
+        },
+        "leakage_audit": {
+          "gan_checkpoint": "outputs/cwgangp_clean_3000/checkpoint_step_3000.pth",
+          "gan_training_scope": "train list outputs/cwgangp_clean_split/cnn_train_files.json (sha256 26f8ca0646027c73f159cf3989e56e5a717551b5695ab3a73fd7a5c402ccb21e)",
+          "gan_training_images": 4480,
+          "gan_overlap_with_cnn_validation": 0,
+          "gan_overlap_with_cnn_training": 4480,
+          "gan_saw_archive_testing": false,
+          "leakage_free": true
+        }
+      },
+      "artifacts": [
+        "/Users/ajaikumarn/Desktop/brain/outputs/downstream_classification_clean/summary.json",
+        "/Users/ajaikumarn/Desktop/brain/outputs/downstream_classification_clean/classification_report.txt"
+      ],
+      "error": null,
+      "child_pid": null,
+      "duration_seconds": 408.1
+    },
+    "D": {
+      "name": "Final research artifacts",
+      "status": "done",
+      "attempts": 2,
+      "repairs": 0,
+      "started": "2026-10-12T01:14:37",
+      "ended": "2026-10-12T11:59:50",
+      "evidence": {
+        "tables": "wrote /Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/final_comparison.csv (18 rows) and final_comparison.png\n"
+      },
+      "artifacts": [
+        "/Users/ajaikumarn/Desktop/brain/outputs/final_report.md",
+        "/Users/ajaikumarn/Desktop/brain/outputs/ia3_slides_outline.md",
+        "/Users/ajaikumarn/Desktop/brain/outputs/ia3_viva_questions.md",
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/final_comparison.csv",
+        "/Users/ajaikumarn/Desktop/brain/outputs/gan_comparison/final_comparison.png"
+      ],
+      "error": null,
+      "child_pid": null,
+      "duration_seconds": 71.0
+    }
+  },
+  "counters": {
+    "claude_calls": 7,
+    "claude_cost_usd": 0.7664,
+    "training_seconds": 810.1206438541412
+  },
+  "decisions": [
+    {
+      "time": "2026-10-12T01:07:04",
+      "after": "A",
+      "next": "B",
+      "claude_decision": "continue",
+      "rationale": "All metrics are finite and plausible. The real-train reference is low (FID 14.13, KID\u00d71000 0.7), and the three GANs are much worse (FID 134\u2013161, KID\u00d71000 119\u2013149). The FID and KID rankings agree: DCGAN is best, cWGAN-GP is second and WGAN-GP is worst. The extractor and implementation (inception-v3-compat, torch-fidelity 0.4.0) are recorded, and the exit status line is present. Nothing in the evidence points to test-set leakage or a broken evaluation, so Stage B can proceed. concerns=['The real-train reference of 14.13 is not zero. Stage B should state what it was compared against, and that the comparison used disjoint real splits.', 'FID/KID with Inception-v3 ImageNet features on brain MRI is a weak proxy. Treat these numbers as relative rankings, not absolute quality.', 'DCGAN beats both WGAN-GP variants, and cWGAN-GP was only trained for 3000 updates. The analysis should note this undertraining caveat and avoid claiming architecture superiority.', 'The README for torch-fidelity warns that FID is biased at small sample sizes. Stage B should record the sample counts used.']"
+    },
+    {
+      "time": "2026-10-12T01:07:43",
+      "after": "B",
+      "next": "C",
+      "claude_decision": "continue",
+      "rationale": "Stage B evidence shows a plausible outcome (DCGAN best on both FID and KID, consistent across metrics) with a normal-sized analysis output. There's no sign of test-set leakage, non-finite values, or implausible metrics, so proceeding to Stage C is fine. concerns=['The evidence summary only gives the best model names, not the actual metric values, so I could not check for NaN/inf or implausibly low scores directly.', 'It is worth confirming that the Stage C classifier is trained on real training data only, with the test set kept out of GAN training and augmentation.']"
+    },
+    {
+      "time": "2026-10-12T01:14:37",
+      "after": "C",
+      "next": "D",
+      "claude_decision": "continue",
+      "rationale": "Stage C metrics are finite and plausible: accuracy 0.81 (real only) vs 0.87 (real plus synthetic), with macro-F1 close to accuracy. Training set sizes are consistent (4480 real, 10080 with synthetic). Per-seed paired differences are all positive. The evidence shows no sign of test-set leakage or non-finite values. Real-only variance across seeds is fairly large (std 0.047), but that is a caveat for reporting, not an integrity problem. concerns=['Real-only accuracy varies a lot across seeds (std 0.047). Only 3 seeds were run, so the 5.75 point mean gain is not statistically strong. The first seed accounts for most of it (+11.7 points, against +1.4 for the last).', 'Confirm in the final artifacts that the synthetic samples were generated and used only for training, and that the test split is real data held out from GAN training.', 'Report the gain as a small-sample, descriptive result, not as a significance claim.']"
+    },
+    {
+      "time": "2026-10-12T11:28:59",
+      "after": "C",
+      "next": "D",
+      "claude_decision": "continue",
+      "rationale": "The leakage audit reports leakage_free=true. The GAN trained only on the CNN training list (4480 images). It had zero overlap with CNN validation, and it never saw the archive testing data. The metrics are finite and plausible: accuracy is 0.81 for real-only and 0.85 for real plus synthetic, and macro-F1 is consistent with accuracy. The training counts are consistent: 4480 real images, and 10080 with synthetic added. The 4480/4480 training overlap is expected, because the GAN is meant to train on the same training set the classifier uses. No serious data-integrity problem is evident, so proceed to Stage D. concerns=['The improvement is not robust across seeds. Per-seed paired differences are +0.114, +0.0125 and -0.005, so the mean gain of +0.040 is driven mostly by one seed. Real-only accuracy for that seed was probably low, since real-only std is 0.047. The final artifacts should report this honestly and avoid claiming a definitive improvement.', 'Only 3 seeds were run, which is too few for significance claims. Report the result as preliminary and add no statistical-significance language.', 'The synthetic run trains on 10080 images versus 4480 for real-only, so the comparison confounds synthetic content with dataset size. State this in the write-up.']"
+    }
+  ]
+}

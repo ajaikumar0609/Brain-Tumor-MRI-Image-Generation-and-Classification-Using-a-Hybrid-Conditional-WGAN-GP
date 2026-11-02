@@ -1,0 +1,28 @@
+{
+  "status": "ok",
+  "device": "mps",
+  "seed": 42,
+  "image_size": 64,
+  "batch_size": 16,
+  "images_used": 512,
+  "subset_class_counts": {
+    "glioma": 131,
+    "meningioma": 130,
+    "notumor": 120,
+    "pituitary": 131
+  },
+  "batches_completed": 32,
+  "runtime_seconds": 2.214,
+  "avg_seconds_per_batch": 0.0692,
+  "initial_d_loss": 1.692049503326416,
+  "initial_g_loss": 3.3378968238830566,
+  "final_d_loss": 0.9163848757743835,
+  "final_g_loss": 12.281126022338867,
+  "all_losses_and_grads_finite": true,
+  "generator_params_changed": true,
+  "discriminator_params_changed": true,
+  "checkpoint_reload_matches_samples": true,
+  "trained_on_testing_dir": false,
+  "train_dir": "/Users/ajaikumarn/Desktop/brain/archive/Training",
+  "mps_fallback_env_set": false
+}
